@@ -19,8 +19,10 @@
 @media(max-width:760px){.studio-shell{display:block}.rail{position:fixed;left:0;top:0;bottom:0;width:260px;height:100dvh;min-height:0;z-index:30;transform:translateX(-105%);transition:transform .22s;box-shadow:20px 0 50px #0b1c1740}.rail.open{transform:translateX(0)}.utility-bar{height:60px;padding:0 13px;gap:9px}.mobile-menu{display:block}.crumb{gap:6px;font-size:8px;overflow:hidden;text-overflow:ellipsis}.crumb span{max-width:115px;overflow:hidden;text-overflow:ellipsis}.utility-right{gap:8px}.date-stamp{display:none}.account-chip{font-size:8px}.account-dot{width:25px;height:25px}.workspace{padding:21px 14px 28px}.page-heading{align-items:flex-start;flex-direction:column;gap:10px;margin-bottom:19px}.page-heading h1{font-size:39px}.heading-aside{white-space:normal}.overview-hero{grid-template-columns:1fr}.hero-copy{padding:26px 22px 22px;min-height:270px}.hero-copy h2{font-size:45px;margin:22px 0 13px}.hero-art{min-height:190px}.hero-art:after{background:linear-gradient(0deg,#10242133,transparent)}.briefing-grid{gap:23px}.pipeline{grid-template-columns:repeat(2,minmax(0,1fr))}.pipe-stage{padding:14px 9px 14px 0;margin-right:10px}.pipe-stage:nth-child(2){border-right:0;margin-right:0}.pipe-stage strong{font-size:27px}.activity-row{grid-template-columns:35px minmax(0,1fr);gap:9px}.activity-mark{width:32px;height:32px}.activity-tag{grid-column:2;justify-self:start}.right-stack{grid-template-columns:1fr}.quick-strip{gap:7px}.quick-action{flex:1 1 42%;justify-content:space-between}.training-feature{grid-template-columns:1fr}.training-feature-copy{padding:23px}.training-art{min-height:155px}.module-list{grid-template-columns:1fr}.module-card{min-height:130px}.crm-banner{grid-template-columns:1fr}.report-hero{grid-template-columns:1fr}.report-figure{min-height:160px}.payout-banner{grid-template-columns:1fr}.payout-stamp{width:83px;height:83px}.side-note{display:block}.side-note .note-rule{display:block}.studio-footer{padding:15px 14px}.studio-footer span:nth-child(2){display:none}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
 
-/* Amour Privé palette — consultant workspace retains its dedicated structure. */
-:root{--ink:#3B0B12;--deep:#26070D;--paper:#F4EBE1;--white:#FFFAF5;--muted:#735F5B;--line:#E6D5B8;--lime:#E6D5B8;--blue:#F4EBE1;--orange:#B18D4B}
-body{background:#F4EBE1;color:#3B0B12}
-.rail{background:#3B0B12;color:#F4EBE1}
-.nav-item.active{background:#4A0E17;color:#F4EBE1}
+/* LOCKED AMOUR PRIVÉ MASTER PALETTE — consultant workspace; layout preserved */
+:root{--ink:#07090A;--deep:#07090A;--paper:#E9E1D5;--white:#F5F1E9;--muted:#666B64;--line:#CFC8B8;--lime:#68704A;--blue:#0B4F4A;--orange:#68704A}
+body{background:#E9E1D5;color:#07090A}
+.rail{background:#07090A;color:#E9E1D5}
+.nav-item.active{background:#0B4F4A;color:#E9E1D5}
+.hero-copy .eyebrow,.page-heading h1 em{color:#68704A}
+.earnings-card,.training-art,.report-figure{background:#68704A;color:#07090A}

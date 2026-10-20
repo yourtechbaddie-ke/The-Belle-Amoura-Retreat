@@ -1,0 +1,119 @@
+.page-hero{background:#073b3a;color:#faf7f0;padding:100px 10% 92px;position:relative;overflow:hidden}
+.page-hero:after{content:"";position:absolute;right:-5%;top:-35%;width:45vw;height:45vw;border:1px solid rgba(230,210,168,.22);border-radius:50%;box-shadow:0 0 0 35px rgba(230,210,168,.04),0 0 0 70px rgba(230,210,168,.025);pointer-events:none}
+.page-hero .eyebrow{color:#e6d2a8}.page-hero h1{font:400 clamp(54px,7vw,88px)/.98 'Cormorant Garamond',Georgia,serif;max-width:900px;letter-spacing:-.035em;margin:28px 0 24px;position:relative;z-index:1}.page-hero h1 em{color:#e6d2a8;font-weight:400}.page-hero .page-lead{max-width:650px;font-size:12px;line-height:2.1;color:#c9d8d0;position:relative;z-index:1}
+.page-body{max-width:1240px;margin:auto;padding:85px 8% 110px}.page-body h2{font:400 clamp(34px,4vw,53px)/1.05 'Cormorant Garamond',Georgia,serif;color:#073b3a;margin:0 0 20px}.page-body h3{font:400 29px/1.1 'Cormorant Garamond',Georgia,serif;color:#073b3a;margin:0 0 12px}.page-body p{font-size:11px;line-height:2.1;color:#65766f}.page-body .lead{font:400 23px/1.45 'Cormorant Garamond',Georgia,serif;color:#125e63}.page-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:35px 0 55px}.page-card{padding:28px 25px;background:#f0eee5;border-top:2px solid #d3bd8d;min-height:190px}.page-card .num{font-size:8px;letter-spacing:.2em;color:#a1844e;display:block;margin-bottom:25px}.page-card p{margin-bottom:0}.page-split{display:grid;grid-template-columns:1fr 1fr;gap:9%;align-items:start;margin:30px 0 60px}.page-note{background:#e9e6d9;padding:25px 28px;margin:35px 0}.page-note p{margin:0}.page-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:27px}.page-button{display:inline-flex;align-items:center;gap:20px;padding:16px 20px;background:#073b3a;color:#faf7f0;font-size:9px;letter-spacing:.1em}.page-button.secondary{background:transparent;border:1px solid #b49a64;color:#073b3a}.contact-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:30px 0}.contact-item{padding:25px;background:#f0eee5;border:1px solid #e0d8c6}.contact-item small{display:block;font-size:8px;letter-spacing:.18em;color:#9b8150;margin-bottom:12px}.contact-item a{font:400 23px 'Cormorant Garamond',Georgia,serif;color:#073b3a;overflow-wrap:anywhere}.page-nav{background:#faf7f0;border-bottom:1px solid #e5dece}.page-nav-inner{max-width:1300px;margin:auto;padding:15px 7%;display:flex;gap:23px;flex-wrap:wrap;align-items:center}.page-nav a{font-size:9px;color:#315a53;letter-spacing:.04em}.page-nav a:hover{color:#a1844e}.page-footer-contact{display:flex;flex-wrap:wrap;gap:18px;font-size:9px;color:#c8d8d0}.page-footer-contact a{color:#e6d2a8}.policy-section{padding:24px 0;border-bottom:1px solid #e4dfd2}.policy-section h2{font-size:31px;margin-bottom:12px}.policy-section p{margin:8px 0}.page-kicker{font-size:8px;letter-spacing:.2em;color:#9b8150;margin-bottom:13px}
+@media(max-width:750px){.page-hero{padding:75px 7% 70px}.page-hero h1{font-size:clamp(50px,13vw,68px)}.page-body{padding:62px 7% 78px}.page-grid{grid-template-columns:1fr;gap:12px}.page-card{min-height:0}.page-split{grid-template-columns:1fr;gap:25px}.contact-list{grid-template-columns:1fr}.page-nav-inner{gap:14px;padding:14px 7%}.page-nav a{font-size:8px}}
+/* Pexels destination photography — layered with a deep lagoon overlay for legible, editorial page heroes. */
+.page-hero{background-color:#073b3a;background-size:cover;background-position:center;background-repeat:no-repeat;isolation:isolate}
+.page-hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,35,34,.88) 0%,rgba(3,43,42,.70) 55%,rgba(3,43,42,.38) 100%);z-index:0;pointer-events:none}
+.page-hero>*{position:relative;z-index:1}
+body[data-page='about'] .page-hero{background-image:url('https://images.pexels.com/photos/8085317/pexels-photo-8085317.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+body[data-page='experiences'] .page-hero{background-image:url('https://images.pexels.com/photos/1450340/pexels-photo-1450340.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+body[data-page='luxury-escapes'] .page-hero{background-image:url('https://images.pexels.com/photos/28915352/pexels-photo-28915352.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+body[data-page='coastal-escapes'] .page-hero{background-image:url('https://images.pexels.com/photos/5007562/pexels-photo-5007562.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+body[data-page='safari-and-nature'] .page-hero{background-image:url('https://images.pexels.com/photos/30705853/pexels-photo-30705853.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+body[data-page='city-and-culture'] .page-hero{background-image:url('https://images.pexels.com/photos/30591782/pexels-photo-30591782.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+body[data-page='family-and-celebrations'] .page-hero{background-image:url('https://images.pexels.com/photos/30225585/pexels-photo-30225585.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+body[data-page='flights-and-stays'] .page-hero{background-image:url('https://images.pexels.com/photos/6306940/pexels-photo-6306940.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+body[data-page='signature-retreats'] .page-hero{background-image:url('https://images.pexels.com/photos/36418268/pexels-photo-36418268.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+body[data-page='book-your-escape'] .page-hero{background-image:url('https://images.pexels.com/photos/1450340/pexels-photo-1450340.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+body[data-page='contact'] .page-hero{background-image:url('https://images.pexels.com/photos/8085317/pexels-photo-8085317.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+body[data-page='contractor-opportunities'] .page-hero{background-image:url('https://images.pexels.com/photos/30591782/pexels-photo-30591782.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+body[data-page='terms'] .page-hero{background-image:url('https://images.pexels.com/photos/6306940/pexels-photo-6306940.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+body[data-page='privacy'] .page-hero{background-image:url('https://images.pexels.com/photos/5007562/pexels-photo-5007562.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+.page-card{position:relative;overflow:hidden;transition:transform .35s ease,box-shadow .35s ease}
+.page-card:hover{transform:translateY(-4px);box-shadow:0 16px 35px rgba(7,59,58,.10)}
+.experience-details{display:grid;gap:34px;margin:70px 0 45px}.experience-feature{display:grid;grid-template-columns:1fr 1fr;min-height:360px;background:#f0eee5;scroll-margin-top:100px;overflow:hidden}.experience-feature.reverse .experience-image{order:2}.experience-image{min-height:340px;background-size:cover;background-position:center;position:relative}.experience-image:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,35,34,.15),transparent 50%)}.experience-copy{padding:clamp(28px,4vw,58px);align-self:center}.experience-copy h2{font:400 clamp(34px,4vw,54px)/1.02 'Cormorant Garamond',Georgia,serif;color:#073b3a;margin:18px 0}.experience-copy p{font-size:11px;line-height:2;color:#65766f}.experience-copy .lead{font:400 22px/1.35 'Cormorant Garamond',Georgia,serif;color:#125e63}.experience-copy .page-button{margin-top:14px}@media(max-width:750px){.experience-feature{grid-template-columns:1fr}.experience-feature.reverse .experience-image{order:0}.experience-image{min-height:230px}.experience-copy{padding:28px 24px}.experience-details{gap:18px;margin:45px 0 30px}}
+@media(max-width:750px){.page-hero{background-position:center}.page-hero:before{background:linear-gradient(90deg,rgba(3,35,34,.86),rgba(3,43,42,.58))}}
+body[data-page='privacy'] main:before{content:'';display:block;height:260px;background:linear-gradient(90deg,rgba(3,35,34,.55),rgba(3,43,42,.08)),url('https://images.pexels.com/photos/5007562/pexels-photo-5007562.jpeg?auto=compress&cs=tinysrgb&w=2000') center 48%/cover no-repeat}
+@media(max-width:700px){body[data-page='privacy'] main:before{height:180px}}
+/* Earth After Rain palette — inner pages */
+.page-hero{background-color:#233D36;color:#E9E6DD}
+.page-hero:after{border-color:rgba(165,172,112,.28);box-shadow:0 0 0 35px rgba(165,172,112,.055),0 0 0 70px rgba(165,172,112,.03)}
+.page-hero:before{background:linear-gradient(90deg,rgba(24,43,36,.9) 0%,rgba(35,61,54,.72) 55%,rgba(35,61,54,.36) 100%)}
+.page-hero .eyebrow{color:#D1D7A1}.page-hero h1 em{color:#A5AC70}.page-hero .page-lead{color:#E0DED2}
+.page-body{background:#E9E6DD}.page-body h2,.page-body h3{color:#233D36}.page-body p{color:#59655C}.page-body .lead{color:#44263C}
+.page-grid .page-card,.page-card{background:#DFDCD1;border-top-color:#A75E45}.page-card .num{color:#A75E45}
+.page-note{background:#D9D5C9;border-left:3px solid #A75E45}
+.page-button{background:#233D36;color:#F4F0E7}.page-button.secondary{border-color:#A75E45;color:#233D36}
+.contact-item{background:#DFDCD1;border-color:#C7C6B8}.contact-item small{color:#A75E45}.contact-item a{color:#233D36}
+.page-nav{background:#E9E6DD;border-color:#C7C6B8}.page-nav a{color:#34463C}.page-nav a:hover{color:#A75E45}
+.page-footer-contact{color:#D9D5C9}.page-footer-contact a{color:#A5AC70}
+.policy-section{border-bottom-color:#C7C6B8}.page-kicker{color:#A75E45}
+.experience-feature{background:#DFDCD1}.experience-copy h2{color:#233D36}.experience-copy p{color:#59655C}.experience-copy .lead{color:#44263C}
+body[data-page='privacy'] main:before{background-image:linear-gradient(90deg,rgba(24,43,36,.65),rgba(35,61,54,.12)),url('https://images.pexels.com/photos/5007562/pexels-photo-5007562.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+@media(max-width:750px){.page-hero:before{background:linear-gradient(90deg,rgba(24,43,36,.88),rgba(35,61,54,.62))}}
+/* THE OBSIDIAN GARDEN — inner pages */
+.page-hero{background-color:#171719;color:#F1EEE8}
+.page-hero:after{border-color:rgba(183,177,192,.28);box-shadow:0 0 0 35px rgba(183,177,192,.055),0 0 0 70px rgba(155,53,75,.045)}
+.page-hero:before{background:linear-gradient(90deg,rgba(17,17,18,.91) 0%,rgba(23,23,25,.72) 55%,rgba(23,23,25,.36) 100%)}
+.page-hero .eyebrow{color:#B7B1C0}.page-hero h1 em{color:#B7B1C0}.page-hero .page-lead{color:#D8D3DA}
+.page-body{background:#F1EEE8}.page-body h2,.page-body h3{color:#171719}.page-body p{color:#625F5D}.page-body .lead{color:#344A32}
+.page-grid .page-card,.page-card{background:#E4E0DA;border-top-color:#9B354B}.page-card .num{color:#9B354B}
+.page-note{background:#E4E0DA;border-left:3px solid #9B354B}
+.page-button{background:#344A32;color:#F1EEE8}.page-button.secondary{border-color:#B7B1C0;color:#171719}
+.contact-item{background:#E4E0DA;border-color:#D1CBC5}.contact-item small{color:#9B354B}.contact-item a{color:#171719}
+.page-nav{background:#F1EEE8;border-color:#D1CBC5}.page-nav a{color:#344A32}.page-nav a:hover{color:#9B354B}
+.page-footer-contact{color:#D8D3DA}.page-footer-contact a{color:#B7B1C0}
+.policy-section{border-bottom-color:#D1CBC5}.page-kicker{color:#9B354B}
+.experience-feature{background:#E4E0DA}.experience-copy h2{color:#171719}.experience-copy p{color:#625F5D}.experience-copy .lead{color:#344A32}
+body[data-page='privacy'] main:before{background-image:linear-gradient(90deg,rgba(17,17,18,.7),rgba(23,23,25,.15)),url('https://images.pexels.com/photos/5007562/pexels-photo-5007562.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+@media(max-width:750px){.page-hero:before{background:linear-gradient(90deg,rgba(17,17,18,.9),rgba(23,23,25,.64))}}
+
+/* Keep inner pages proportionate at every viewport; prevent long text and grids from forcing overflow. */
+html,body{max-width:100%;overflow-x:clip}
+.page-hero,.page-body,.page-nav,.page-footer-contact,.page-grid,.page-split,.experience-feature,.experience-copy,.contact-item{min-width:0}
+.page-hero h1,.page-lead,.page-body p,.page-nav a,.page-footer-contact a,.contact-item a{overflow-wrap:anywhere}
+.page-hero h1{font-size:clamp(42px,6.5vw,88px);line-height:1.02}
+.page-body{padding-left:clamp(20px,8%,100px);padding-right:clamp(20px,8%,100px)}
+.page-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.page-split{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(22px,5vw,9%)}
+.experience-feature{grid-template-columns:repeat(2,minmax(0,1fr))}
+.experience-copy{padding:clamp(22px,3.5vw,58px)}
+.page-nav-inner{min-width:0;flex-wrap:wrap}
+@media(max-width:820px){
+ .page-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .page-split{grid-template-columns:minmax(0,1fr);gap:22px}
+ .experience-feature{grid-template-columns:minmax(0,1fr)}
+ .experience-feature.reverse .experience-image{order:0}
+ .experience-image{min-height:clamp(210px,42vw,320px)}
+ .page-hero{padding:clamp(42px,7vw,68px) 7%}
+ .page-body{padding:clamp(30px,6vw,48px) 7% clamp(38px,7vw,58px)}
+}
+@media(max-width:560px){
+ .page-grid,.contact-list{grid-template-columns:minmax(0,1fr)}
+ .page-nav-inner{gap:10px 14px}
+ .page-nav a{font-size:9px}
+ .page-actions{align-items:stretch}
+ .page-button{justify-content:center;max-width:100%;overflow-wrap:anywhere}
+ .page-footer-contact{width:100%;gap:10px}
+ .experience-copy{padding:24px 20px}
+ .experience-copy h2{font-size:clamp(32px,9vw,44px)}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important}}
+/* Compact vertical spacing on all inner pages. */
+.page-hero{padding:68px 8% 60px}
+.page-body{padding-top:42px;padding-bottom:54px}
+.page-grid{gap:18px}
+.experience-details{gap:22px;margin:42px 0 28px}
+.experience-feature{min-height:300px}
+.experience-image{min-height:280px}
+.experience-copy{padding:clamp(24px,3vw,42px)}
+.policy-section{padding-block:22px}
+.page-nav{margin-top:30px}
+@media(max-width:750px){.page-hero{padding:48px 7% 42px}.page-body{padding-top:30px;padding-bottom:38px}.experience-details{gap:16px;margin:28px 0 20px}.experience-feature{min-height:0}.experience-image{min-height:210px}.experience-copy{padding:24px 20px}.policy-section{padding-block:17px}.page-nav{margin-top:22px}}\n/* Elegant footer contact rhythm: keep each contact method on its own line with comfortable breathing room. */\n.page-footer-contact{display:flex;flex-direction:column;align-items:flex-start;gap:11px;line-height:1.8;min-width:0;font-size:9px}\n.page-footer-contact a{display:block;max-width:100%;overflow-wrap:anywhere;line-height:1.8;padding:1px 0}\n@media(max-width:750px){.footer-main{align-items:flex-start}.page-footer-contact{width:100%;gap:12px;padding-top:5px}.footer-main>p{width:100%;order:initial;margin:0}}
+
+/* Portfolio palette continuity across inner pages — layered over existing layouts. */
+.page-hero{background-color:#260914;color:#F7F0E4}
+.page-hero:after{border-color:rgba(217,195,184,.3);box-shadow:0 0 0 35px rgba(168,196,193,.06),0 0 0 70px rgba(91,18,48,.05)}
+.page-hero:before{background:linear-gradient(90deg,rgba(38,9,20,.91) 0%,rgba(38,9,20,.73) 55%,rgba(38,9,20,.38) 100%)}
+.page-hero .eyebrow{color:#A8C4C1}.page-hero h1 em{color:#D9C3B8}.page-hero .page-lead{color:#EADFCE}
+.page-body{background:#F7F0E4}.page-body h2,.page-body h3{color:#260914}.page-body p{color:#62565D}.page-body .lead{color:#5B1230}
+.page-grid .page-card,.page-card{background:#EADFCE;border-top-color:#5B1230}.page-card .num{color:#5B1230}
+.page-note{background:#EADFCE;border-left:3px solid #D9C3B8}.page-button{background:#31503F;color:#F7F0E4}.page-button.secondary{border-color:#A8C4C1;color:#260914}
+.contact-item{background:#EADFCE;border-color:#D9C3B8}.contact-item small,.page-kicker{color:#5B1230}.contact-item a{color:#260914}
+.page-nav{background:#F7F0E4;border-color:#D9C3B8}.page-nav a{color:#31503F}.page-nav a:hover{color:#5B1230}.page-footer-contact{color:#EADFCE}.page-footer-contact a{color:#D9C3B8}
+.policy-section{border-bottom-color:#D9C3B8}.experience-feature{background:#EADFCE}.experience-copy h2{color:#260914}.experience-copy p{color:#62565D}.experience-copy .lead{color:#5B1230}
+body[data-page='privacy'] main:before{background-image:linear-gradient(90deg,rgba(38,9,20,.68),rgba(38,9,20,.15)),url('https://images.pexels.com/photos/5007562/pexels-photo-5007562.jpeg?auto=compress&cs=tinysrgb&w=2000')}
+.settings-card{background:#F7F0E4!important;border-color:#D9C3B8!important}.settings-card h2,.settings-row label{color:#260914!important}.settings-card>p,.settings-row small{color:#62565D!important}.settings-row select{background:#F7F0E4!important;color:#260914!important;border-color:#D9C3B8!important}.settings-row select,.settings-row input[type=checkbox]{accent-color:#31503F}
+@media(max-width:750px){.page-hero:before{background:linear-gradient(90deg,rgba(38,9,20,.9),rgba(38,9,20,.64))}}

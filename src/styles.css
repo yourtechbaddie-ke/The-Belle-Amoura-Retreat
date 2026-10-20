@@ -247,3 +247,13 @@ body{background:#F7F0E4;color:#241820}
 .inquiry-form{background:#F7F0E4;color:#260914;border-top-color:#5B1230}.form-top{border-bottom-color:#D9C3B8;color:#5B1230}.form-top span:last-child{color:#5B1230}.inquiry-form label{color:#31503F}.inquiry-form input:focus,.inquiry-form select:focus,.inquiry-form textarea:focus{border-color:#5B1230}.inquiry-form input:not([type=checkbox]),.inquiry-form select,.inquiry-form textarea{border-bottom-color:#D9C3B8;color:#241820}.inquiry-form input::placeholder,.inquiry-form textarea::placeholder{color:#8B7B80}.consent{color:#6F6268!important}.consent input{accent-color:#31503F}.button-dark{background:#31503F;color:#F7F0E4}.button-dark span:last-child{color:#D9C3B8}.form-status{color:#31503F}.form-status:not(:empty){background:#EADFCE}.privacy-note{color:#6F6268}
 .footer{background:#1B0710;color:#F7F0E4}.brand-footer .brand-mark{color:#F7F0E4}.brand-footer .brand-name{color:#F7F0E4}.brand-footer .brand-name small{color:#A8C4C1}.footer-main>p{color:#D9C3B8}.footer-bottom{border-top-color:rgba(217,195,184,.25);color:#A8C4C1}.footer a:hover,.back-top:hover{color:#D9C3B8}
 @media(max-width:700px){.nav-links{background:#F7F0E4}.nav-links>a{border-bottom-color:#EADFCE}.hero-image{background-position:57% center}.hero-shade{background:linear-gradient(90deg,rgba(38,9,20,.88),rgba(38,9,20,.3)),linear-gradient(0deg,rgba(38,9,20,.5),transparent 65%)}}
+
+/* Amour Privé brand palette — visual overrides only; layout and imagery preserved. */
+:root{--lagoon:#3B0B12;--atlantic:#4A0E17;--mist:#E6D5B8;--champagne:#E6D5B8;--porcelain:#F4EBE1;--ink:#3B0B12;--muted:#735F5B;--forest:#3B0B12;--copper:#B18D4B}
+body{background:#F4EBE1;color:#3B0B12}
+.announcement,.footer,.inquiry-aside,.manifesto-panel{background-color:#3B0B12;color:#F4EBE1}
+.site-header,.inquiry-form{background-color:#F4EBE1}
+.nav-cta,.button-dark,.submit-button{background:#3B0B12!important;color:#F4EBE1!important}
+.button-champagne{background:#E6D5B8!important;color:#3B0B12!important}
+.dark-link,.eyebrow,.section-heading h2 em{color:#4A0E17}
+.round-arrow{border-color:#E6D5B8;color:#E6D5B8}

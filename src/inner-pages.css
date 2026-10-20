@@ -104,18 +104,18 @@ html,body{max-width:100%;overflow-x:clip}
 @media(max-width:750px){.page-hero{padding:48px 7% 42px}.page-body{padding-top:30px;padding-bottom:38px}.experience-details{gap:16px;margin:28px 0 20px}.experience-feature{min-height:0}.experience-image{min-height:210px}.experience-copy{padding:24px 20px}.policy-section{padding-block:17px}.page-nav{margin-top:22px}}\n/* Elegant footer contact rhythm: keep each contact method on its own line with comfortable breathing room. */\n.page-footer-contact{display:flex;flex-direction:column;align-items:flex-start;gap:11px;line-height:1.8;min-width:0;font-size:9px}\n.page-footer-contact a{display:block;max-width:100%;overflow-wrap:anywhere;line-height:1.8;padding:1px 0}\n@media(max-width:750px){.footer-main{align-items:flex-start}.page-footer-contact{width:100%;gap:12px;padding-top:5px}.footer-main>p{width:100%;order:initial;margin:0}}
 
 /* Portfolio palette continuity across inner pages — layered over existing layouts. */
-.page-hero{background-color:#260914;color:#F7F0E4}
+.page-hero{background-color:#07090A;color:#E9E1D5}
 .page-hero:after{border-color:rgba(217,195,184,.3);box-shadow:0 0 0 35px rgba(168,196,193,.06),0 0 0 70px rgba(91,18,48,.05)}
 .page-hero:before{background:linear-gradient(90deg,rgba(38,9,20,.91) 0%,rgba(38,9,20,.73) 55%,rgba(38,9,20,.38) 100%)}
-.page-hero .eyebrow{color:#A8C4C1}.page-hero h1 em{color:#D9C3B8}.page-hero .page-lead{color:#EADFCE}
-.page-body{background:#F7F0E4}.page-body h2,.page-body h3{color:#260914}.page-body p{color:#62565D}.page-body .lead{color:#5B1230}
-.page-grid .page-card,.page-card{background:#EADFCE;border-top-color:#5B1230}.page-card .num{color:#5B1230}
-.page-note{background:#EADFCE;border-left:3px solid #D9C3B8}.page-button{background:#31503F;color:#F7F0E4}.page-button.secondary{border-color:#A8C4C1;color:#260914}
-.contact-item{background:#EADFCE;border-color:#D9C3B8}.contact-item small,.page-kicker{color:#5B1230}.contact-item a{color:#260914}
-.page-nav{background:#F7F0E4;border-color:#D9C3B8}.page-nav a{color:#31503F}.page-nav a:hover{color:#5B1230}.page-footer-contact{color:#EADFCE}.page-footer-contact a{color:#D9C3B8}
-.policy-section{border-bottom-color:#D9C3B8}.experience-feature{background:#EADFCE}.experience-copy h2{color:#260914}.experience-copy p{color:#62565D}.experience-copy .lead{color:#5B1230}
+.page-hero .eyebrow{color:#0B4F4A}.page-hero h1 em{color:#CFC8B8}.page-hero .page-lead{color:#E9E1D5}
+.page-body{background:#E9E1D5}.page-body h2,.page-body h3{color:#07090A}.page-body p{color:#666B64}.page-body .lead{color:#0B4F4A}
+.page-grid .page-card,.page-card{background:#E9E1D5;border-top-color:#0B4F4A}.page-card .num{color:#0B4F4A}
+.page-note{background:#E9E1D5;border-left:3px solid #CFC8B8}.page-button{background:#063B3D;color:#E9E1D5}.page-button.secondary{border-color:#0B4F4A;color:#07090A}
+.contact-item{background:#E9E1D5;border-color:#CFC8B8}.contact-item small,.page-kicker{color:#0B4F4A}.contact-item a{color:#07090A}
+.page-nav{background:#E9E1D5;border-color:#CFC8B8}.page-nav a{color:#063B3D}.page-nav a:hover{color:#0B4F4A}.page-footer-contact{color:#E9E1D5}.page-footer-contact a{color:#CFC8B8}
+.policy-section{border-bottom-color:#CFC8B8}.experience-feature{background:#E9E1D5}.experience-copy h2{color:#07090A}.experience-copy p{color:#666B64}.experience-copy .lead{color:#0B4F4A}
 body[data-page='privacy'] main:before{background-image:linear-gradient(90deg,rgba(38,9,20,.68),rgba(38,9,20,.15)),url('https://images.pexels.com/photos/5007562/pexels-photo-5007562.jpeg?auto=compress&cs=tinysrgb&w=2000')}
-.settings-card{background:#F7F0E4!important;border-color:#D9C3B8!important}.settings-card h2,.settings-row label{color:#260914!important}.settings-card>p,.settings-row small{color:#62565D!important}.settings-row select{background:#F7F0E4!important;color:#260914!important;border-color:#D9C3B8!important}.settings-row select,.settings-row input[type=checkbox]{accent-color:#31503F}
+.settings-card{background:#E9E1D5!important;border-color:#CFC8B8!important}.settings-card h2,.settings-row label{color:#07090A!important}.settings-card>p,.settings-row small{color:#666B64!important}.settings-row select{background:#E9E1D5!important;color:#07090A!important;border-color:#CFC8B8!important}.settings-row select,.settings-row input[type=checkbox]{accent-color:#063B3D}
 @media(max-width:750px){.page-hero:before{background:linear-gradient(90deg,rgba(38,9,20,.9),rgba(38,9,20,.64))}}
 
 /* LOCKED AMOUR PRIVÉ MASTER PALETTE — inner pages */

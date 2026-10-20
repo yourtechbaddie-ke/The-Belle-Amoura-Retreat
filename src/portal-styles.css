@@ -14,3 +14,10 @@ body[data-theme=admin] .hero{border-radius:16px;background:linear-gradient(120de
 @media(max-width:1000px){.shell{grid-template-columns:205px minmax(0,1fr)}.sidebar{padding:19px 11px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.columns{grid-template-columns:1fr}.hero{grid-template-columns:1fr 95px}.seal{width:90px;height:90px;font-size:24px}}
 @media(max-width:700px){.shell{display:block}.sidebar{display:none;position:fixed;top:70px;left:0;width:255px;height:calc(100dvh - 70px);min-height:0;z-index:20;box-shadow:12px 0 30px #0002}.sidebar.open{display:flex}.topbar{height:70px;padding:0 13px}.menu-toggle{display:block}.page-title{font-size:9px;letter-spacing:.05em}.status{display:none}.content{padding:16px 12px 23px}.hero{grid-template-columns:1fr;padding:22px 18px}.seal{display:none}.hero h1{font-size:34px}.section-head{margin-top:24px}.stats{gap:8px}.stat{padding:12px;min-height:104px}.stat-value{font-size:23px}.panel{padding:14px}.actions{grid-template-columns:1fr 1fr}.footer{padding:16px 12px}}
 @media(max-width:390px){.stats,.actions{grid-template-columns:1fr}.hero h1{font-size:30px}}
+
+/* Amour Privé shared palette; portal role accents remain distinct. */
+:root{--bg:#F4EBE1;--paper:#FFFAF5;--ink:#3B0B12;--muted:#735F5B;--line:#E6D5B8;--wine:#4A0E17;--gold:#B18D4B;--blush:#E6D5B8;--sage:#F4EBE1;--teal:#4A0E17;--navy:#3B0B12;--coral:#B18D4B;--accent:#4A0E17;--dark:#3B0B12;--soft:#F4EBE1;--accent2:#B18D4B;--ornament:#E6D5B8}
+body[data-theme=consultant]{--accent:#4A0E17;--dark:#3B0B12;--soft:#F4EBE1;--accent2:#B18D4B;--ornament:#E6D5B8;--bg:#F4EBE1}
+body[data-theme=investor]{--accent:#3B0B12;--dark:#26070D;--soft:#E6D5B8;--accent2:#B18D4B;--ornament:#D9B98A;--bg:#F4EBE1}
+body[data-theme=partner]{--accent:#4A0E17;--dark:#3B0B12;--soft:#FFFAF5;--accent2:#B18D4B;--ornament:#E6D5B8;--bg:#F4EBE1}
+body[data-theme=admin]{--accent:#3B0B12;--dark:#26070D;--soft:#F4EBE1;--accent2:#B18D4B;--ornament:#E6D5B8;--bg:#F4EBE1}

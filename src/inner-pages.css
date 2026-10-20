@@ -118,10 +118,11 @@ body[data-page='privacy'] main:before{background-image:linear-gradient(90deg,rgb
 .settings-card{background:#F7F0E4!important;border-color:#D9C3B8!important}.settings-card h2,.settings-row label{color:#260914!important}.settings-card>p,.settings-row small{color:#62565D!important}.settings-row select{background:#F7F0E4!important;color:#260914!important;border-color:#D9C3B8!important}.settings-row select,.settings-row input[type=checkbox]{accent-color:#31503F}
 @media(max-width:750px){.page-hero:before{background:linear-gradient(90deg,rgba(38,9,20,.9),rgba(38,9,20,.64))}}
 
-/* Amour Privé brand palette — keep each page layout intact. */
-body{background:#F4EBE1;color:#3B0B12}
-.site-header,.inner-header,.page-header,.content-panel,.form-panel{background-color:#F4EBE1}
-.announcement,.site-footer,.footer,.page-hero,.inner-hero,.cta-panel{background-color:#3B0B12;color:#F4EBE1}
-.button,.btn,.nav-cta,.button-primary,.primary-cta{background:#3B0B12;color:#F4EBE1;border-color:#B18D4B}
-.button-secondary,.button-outline,.btn-outline{border-color:#B18D4B;color:#4A0E17}
-.eyebrow,.kicker,.section-label{color:#B18D4B}
+/* LOCKED AMOUR PRIVÉ MASTER PALETTE — inner pages */
+:root{--ink:#07090A;--lagoon:#063B3D;--atlantic:#0B4F4A;--mist:#68704A;--champagne:#E9E1D5;--porcelain:#E9E1D5;--muted:#666B64}
+body{background:#E9E1D5;color:#07090A}
+.site-header,.inner-header,.page-header,.content-panel,.form-panel,.settings-card{background-color:#E9E1D5}
+.announcement,.site-footer,.footer,.page-hero,.inner-hero,.cta-panel{background-color:#07090A;color:#E9E1D5}
+.button,.btn,.nav-cta,.button-primary,.primary-cta{background:#063B3D;color:#E9E1D5;border-color:#68704A}
+.button-secondary,.button-outline,.btn-outline{border-color:#68704A;color:#0B4F4A}
+.eyebrow,.kicker,.section-label,.page-kicker{color:#0B4F4A}

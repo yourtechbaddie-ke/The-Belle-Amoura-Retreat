@@ -67,3 +67,5 @@ body{background:#E9E1D5;color:#07090A}
 .reading-row p{font-size:11px;line-height:1.7;color:var(--muted)}
 .academy-disclaimer{font-size:10px;line-height:1.8;color:var(--muted);border-top:1px solid var(--line);padding:16px 0;margin-bottom:20px}
 @media(max-width:760px){.academy-intro,.academy-practice{grid-template-columns:1fr}.academy-stats{grid-template-columns:1fr}.academy-module-grid{grid-template-columns:1fr}.reading-row{grid-template-columns:1fr}.academy-module{min-height:0}.academy-practice{padding:23px}}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');body{font-family:'Lora',Georgia,serif;color:#07090A;background:#E9E1D5}h1,h2,h3,h4,.rail-label,.nav-item,.eyebrow,.monogram{font-family:'Playfair Display',Georgia,serif}.rail{background:#07090A!important;color:#E9E1D5!important}.studio-shell{background:#E9E1D5;color:#07090A}

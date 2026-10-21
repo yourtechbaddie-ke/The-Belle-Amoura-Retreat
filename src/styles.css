@@ -258,3 +258,7 @@ body{background:#E9E1D5;color:#07090A}
 .dark-link,.eyebrow,.section-heading h2 em{color:#0B4F4A}
 .round-arrow{border-color:#E9E1D5;color:#E9E1D5}
 .hero-shade{background:linear-gradient(90deg,rgba(7,9,10,.78) 0%,rgba(6,59,61,.48) 42%,rgba(7,9,10,.08) 100%),linear-gradient(0deg,rgba(7,9,10,.35),transparent 45%)}
+
+/* FINAL LOCKED AMOUR PRIVÉ PALETTE — Peacock Teal + Obsidian. */
+:root{--lagoon:#07090A;--atlantic:#0B4F4A;--mist:#68704A;--champagne:#E9E1D5;--porcelain:#E9E1D5;--ink:#07090A;--muted:#666B64;--forest:#063B3D;--copper:#68704A}
+body{background:#E9E1D5;color:#07090A}.announcement,.footer,.manifesto-panel,.inquiry{background:#07090A;color:#E9E1D5}.site-header,.intro,.process,.inquiry-form{background:#E9E1D5}.brand-mark{border-color:#68704A;color:#07090A}.brand-mark span,.nav-links>a:not(.nav-cta):hover,.intro h2 em,.section-heading h2 em,.signature,.lead{color:#0B4F4A}.nav-cta,.button-dark{background:#0B4F4A!important;color:#E9E1D5!important}.button-champagne{background:#E9E1D5!important;color:#0B4F4A!important}.hero h1 em,.quote-band em,.hero-index span{color:#E9E1D5}.hero-shade{background:linear-gradient(90deg,rgba(7,9,10,.84),rgba(6,59,61,.46) 48%,rgba(7,9,10,.08)),linear-gradient(0deg,rgba(7,9,10,.42),transparent 48%)}.quote-band{background:#063B3D;color:#E9E1D5}.footer-bottom{color:#E9E1D5}.step-icon{color:#0B4F4A;border-color:#68704A}.inquiry-form label{color:#063B3D}

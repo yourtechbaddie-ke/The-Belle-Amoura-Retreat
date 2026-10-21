@@ -2,6 +2,10 @@
 
 Source repository for The Belle Amoura Retreat website and partner/business portals.
 
+## Vercel project roots
+- Official public website project: `src/`
+- Separate portal project: `portals/`
+
 ## Source layout
 - `src/` — public website and shared static assets
 - `portals/` — portal interfaces for Vercel's portal project
@@ -15,4 +19,3 @@ Source repository for The Belle Amoura Retreat website and partner/business port
 - Pearl: `#E9E1D5`
 
 The same master palette applies to the official website and every portal. Portal layouts and role-specific experiences remain distinct.
-The production interfaces are maintained across the existing Hatchable project and Vercel deployment artifacts. This repository is being populated from the accessible source files so the projects can be version-controlled and deployed from GitHub.

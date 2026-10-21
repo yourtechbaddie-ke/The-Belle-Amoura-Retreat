@@ -1,0 +1,41 @@
+/* BELLE AMOURA — unified editorial design system
+   Seven coordinated type families. Brand colours frame the experience; photography retains its own natural colour. */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600;700&family=Italiana&family=Jost:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cinzel:wght@400;500;600;700&display=swap');
+:root{
+ --obsidian:#07090A;--deep-peacock:#063B3D;--peacock:#0B4F4A;--antique-brass:#B7955B;--pearl:#E9E1D5;--antique-grass:#68704A;--deep-grass:#4F5737;
+ --type-display:'Italiana','Cormorant Garamond',serif;
+ --type-editorial:'Playfair Display',serif;
+ --type-contrast:'Cormorant Garamond',serif;
+ --type-brand:'Cinzel',serif;
+ --type-body:'Lora',serif;
+ --type-ui:'Manrope',sans-serif;
+ --type-label:'DM Sans',sans-serif;
+ --type-modern:'Jost',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--type-body)!important;font-weight:400;letter-spacing:.005em}
+h1,h2{font-family:var(--type-display)!important;font-weight:400!important;letter-spacing:-.025em}
+h3,h4,.editorial-heading,.section-title{font-family:var(--type-editorial)!important;font-weight:500!important}
+h1 em,h2 em,.display-italic{font-family:var(--type-contrast)!important;font-weight:400!important}
+.brand,.brand-name,.brand-mark,.wordmark,.logo-type{font-family:var(--type-brand)!important}
+p,li,blockquote,.copy,.page-lead,.hero-copy,.desc{font-family:var(--type-body)!important}
+button,input,select,textarea,.button,.nav-links,.nav-cta,.eyebrow,.kicker,.label,.tag,.announcement,.menu-toggle,.text-link,.page-nav,.fine,.meta,.eyebrow small{font-family:var(--type-label)!important}
+nav a,.utility,.form-label,.dashboard-nav,.portal-nav{font-family:var(--type-ui)!important}
+small,.microcopy,.caption,.image-caption,.overline,.eyebrow{font-family:var(--type-modern)!important}
+.announcement{letter-spacing:.18em}
+.eyebrow,.kicker,.overline,.page-kicker{letter-spacing:.2em!important;text-transform:uppercase}
+h1{line-height:.99!important}
+h2{line-height:1.04!important}
+p{line-height:1.85}
+a,button{transition:color .25s ease,background-color .25s ease,border-color .25s ease,transform .25s ease}
+img{max-width:100%}
+:focus-visible{outline:2px solid var(--antique-brass);outline-offset:4px}
+::selection{background:var(--peacock);color:var(--pearl)}
+/* Editorial page rhythm: layered, asymmetric, generous, tactile. */
+.page-body,.content,.section-inner{position:relative}
+.page-card,.contact-item,.card,.experience-card,.escape-card,.journal-card{transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
+.page-card:hover,.contact-item:hover,.card:hover,.experience-card:hover,.escape-card:hover,.journal-card:hover{transform:translateY(-4px)}
+/* Keep destination imagery authentic; colour belongs to frames, typography and overlays, not filters on the photograph. */
+.hero-image,.page-hero,.visual,.destination-image,.experience-image{background-color:var(--deep-peacock)}
+.hero img,.hero-image img,.page-hero img{filter:none!important}
+@media(max-width:700px){h1{letter-spacing:-.015em!important}.announcement{font-size:8px;letter-spacing:.12em}.page-body p,.page-lead{line-height:1.9}}

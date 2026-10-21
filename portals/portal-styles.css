@@ -21,3 +21,7 @@ body[data-theme=consultant]{--accent:#0B4F4A;--dark:#07090A;--soft:#E9E1D5;--acc
 body[data-theme=investor]{--accent:#063B3D;--dark:#07090A;--soft:#E9E1D5;--accent2:#4F5737;--ornament:#68704A;--bg:#E9E1D5}
 body[data-theme=partner]{--accent:#0B4F4A;--dark:#07090A;--soft:#F5F1E9;--accent2:#68704A;--ornament:#E9E1D5;--bg:#E9E1D5}
 body[data-theme=admin]{--accent:#063B3D;--dark:#07090A;--soft:#E9E1D5;--accent2:#68704A;--ornament:#E9E1D5;--bg:#E9E1D5}
+
+/* FINAL LOCKED AMOUR PRIVÉ MASTER PALETTE — all portals share Peacock Teal + Obsidian, while retaining distinct role-specific layouts. */
+:root{--bg:#E9E1D5;--paper:#F5F0E7;--ink:#07090A;--muted:#666B64;--line:#CFC8B8;--accent:#0B4F4A;--dark:#07090A;--soft:#DDE8E3;--accent2:#68704A;--ornament:#CFC8B8;--gold:#CFC8B8;--teal:#0B4F4A;--navy:#063B3D;--wine:#07090A;--shadow:0 20px 60px #07090a18}
+body{background:#E9E1D5;color:#07090A}body[data-theme=admin],body[data-theme=consultant],body[data-theme=investor],body[data-theme=partner]{--accent:#0B4F4A;--dark:#07090A;--soft:#DDE8E3;--accent2:#68704A;--ornament:#CFC8B8;--bg:#E9E1D5}.sidebar{background:#07090A}.sidebar .brand-mark{color:#E9E1D5;border-color:#68704A}.main,.content,.workspace{background:#E9E1D5;color:#07090A}button.primary,.btn-primary,.button-primary{background:#0B4F4A;color:#E9E1D5;border-color:#0B4F4A}a{accent-color:#0B4F4A}

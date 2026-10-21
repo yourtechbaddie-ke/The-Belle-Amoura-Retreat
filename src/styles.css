@@ -262,3 +262,27 @@ body{background:#E9E1D5;color:#07090A}
 /* FINAL LOCKED AMOUR PRIVÉ PALETTE — Peacock Teal + Obsidian. */
 :root{--lagoon:#07090A;--atlantic:#0B4F4A;--mist:#68704A;--champagne:#E9E1D5;--porcelain:#E9E1D5;--ink:#07090A;--muted:#666B64;--forest:#063B3D;--copper:#68704A}
 body{background:#E9E1D5;color:#07090A}.announcement,.footer,.manifesto-panel,.inquiry{background:#07090A;color:#E9E1D5}.site-header,.intro,.process,.inquiry-form{background:#E9E1D5}.brand-mark{border-color:#68704A;color:#07090A}.brand-mark span,.nav-links>a:not(.nav-cta):hover,.intro h2 em,.section-heading h2 em,.signature,.lead{color:#0B4F4A}.nav-cta,.button-dark{background:#0B4F4A!important;color:#E9E1D5!important}.button-champagne{background:#E9E1D5!important;color:#0B4F4A!important}.hero h1 em,.quote-band em,.hero-index span{color:#E9E1D5}.hero-shade{background:linear-gradient(90deg,rgba(7,9,10,.84),rgba(6,59,61,.46) 48%,rgba(7,9,10,.08)),linear-gradient(0deg,rgba(7,9,10,.42),transparent 48%)}.quote-band{background:#063B3D;color:#E9E1D5}.footer-bottom{color:#E9E1D5}.step-icon{color:#0B4F4A;border-color:#68704A}.inquiry-form label{color:#063B3D}
+
+/* Brand restoration 2026: locked Amour Privé palette, editorial serif system and Pexels imagery */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+:root{--lagoon:#07090A;--atlantic:#0B4F4A;--mist:#68704A;--champagne:#B7955B;--porcelain:#E9E1D5;--ink:#07090A;--forest:#063B3D;--deep:#063B3D;--pearl:#E9E1D5;--antique-grass:#68704A;--deep-antique-grass:#4F5737}
+body{font-family:'Lora',Georgia,serif;color:#07090A;background:#E9E1D5}
+h1,h2,h3,h4,.brand-name,.brand-mark,.eyebrow,.nav-links,.button,.text-link,.card-number,.card-kicker,.hero-note,.hero-index,.small-index,.announcement,.section-sidecopy,.footer-bottom{font-family:'Playfair Display',Georgia,serif}
+.site-header{background:#E9E1D5;color:#07090A}
+.brand-mark{border-color:#B7955B;color:#07090A}
+.brand-mark span,.intro h2 em,.section-heading h2 em,.signature,.lead{color:#0B4F4A}
+.nav-links a{color:#07090A}
+.nav-cta,.button-dark{background:#0B4F4A!important;color:#E9E1D5!important;border-color:#0B4F4A!important}
+.button-champagne{background:#E9E1D5!important;color:#0B4F4A!important;border:1px solid #B7955B!important}
+.hero-shade{background:linear-gradient(90deg,rgba(7,9,10,.83),rgba(6,59,61,.48) 50%,rgba(7,9,10,.1)),linear-gradient(0deg,rgba(7,9,10,.5),transparent 55%)}
+.hero h1 em{color:#E9E1D5}
+.intro,.process,.inquiry-form{background:#E9E1D5}
+.escapes{background:#E9E1D5}
+.quote-band,.manifesto-panel{background:#063B3D;color:#E9E1D5}
+.footer,.announcement{background:#07090A;color:#E9E1D5}
+.footer a{color:#E9E1D5}
+.escape-card .card-photo{transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .7s}
+.escape-card:hover .card-photo{transform:scale(1.035);filter:saturate(1.12)}
+.button,.nav-cta,.card-link,.text-link,button,a{transition:color .2s,background .2s,border-color .2s}
+:focus-visible{outline:2px solid #B7955B;outline-offset:4px}
+@media(max-width:700px){.nav-links{background:#E9E1D5}.site-header{gap:12px}}

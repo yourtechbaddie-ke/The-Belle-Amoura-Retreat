@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#063B3D">
+  <meta name="description" content="Influencer &amp; Creator Alliance | The Belle Amoura Retreat. Luxury villa residencies, co-branded sanctuary releases, and high-tier affiliate partnerships for discerning creators.">
+  <title>Influencer &amp; Creator Alliance | The Belle Amoura Retreat</title>
+
+  <link rel="icon" type="image/png" href="/assets/logo-emblem.png">
+  <link rel="apple-touch-icon" href="/assets/logo-emblem.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=50">
+
+  <style>
+    .influencer-hero {
+      position: relative;
+      min-height: 62vh;
+      background-color: var(--peacock-dark, #042426);
+      background-image: url('https://images.pexels.com/photos/34790496/pexels-photo-34790496.jpeg?auto=compress&cs=tinysrgb&w=2200');
+      background-size: cover;
+      background-position: center 46%;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      padding: clamp(75px, 11vw, 105px) 6.5% 65px;
+      overflow: hidden;
+    }
+    .influencer-hero-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(4,36,38,0.96) 0%, rgba(4,36,38,0.76) 52%, rgba(4,36,38,0.3) 100%),
+                  linear-gradient(0deg, rgba(4,36,38,0.7) 0%, transparent 60%);
+    }
+    .influencer-hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 840px;
+    }
+    .influencer-hero h1 {
+      font-family: var(--serif, 'Playfair Display', serif);
+      font-size: clamp(40px, 5.8vw, 78px);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      margin: 16px 0 20px;
+      color: #FFFFFF;
+    }
+    .influencer-hero h1 em {
+      color: var(--gold-champagne, #E6D2A8);
+      font-style: italic;
+    }
+    .influencer-hero p {
+      font-size: 15.5px;
+      line-height: 1.85;
+      color: rgba(250, 247, 240, 0.9);
+      max-width: 640px;
+      margin: 0 0 28px;
+    }
+
+    .models-section {
+      padding: 90px 6.5%;
+      background: var(--ivory, #FAF7F0);
+    }
+    .models-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    @media (max-width: 960px) {
+      .models-grid { grid-template-columns: 1fr; }
+    }
+    .model-card {
+      background: #FFFFFF;
+      padding: 36px 30px;
+      border: 1px solid var(--border-subtle, #d8d0c0);
+      border-top: 3px solid var(--peacock, #0B4F4A);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .model-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(4, 36, 38, 0.08);
+    }
+    .model-card.featured {
+      border-top-color: var(--gold, #B7955B);
+      background: linear-gradient(180deg, #FFFDF8 0%, #FFFFFF 100%);
+    }
+    .model-badge {
+      font-family: var(--sans, 'Manrope', sans-serif);
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--peacock, #0B4F4A);
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .model-card h3 {
+      font-family: var(--serif, 'Playfair Display', serif);
+      font-size: 24px;
+      color: var(--peacock-deep, #042426);
+      margin: 0 0 12px;
+      line-height: 1.2;
+    }
+    .model-card p {
+      font-size: 13px;
+      line-height: 1.8;
+      color: var(--text-muted, #555);
+      margin: 0 0 20px;
+    }
+    .model-perks {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+      display: grid;
+      gap: 10px;
+      font-size: 12.5px;
+      color: #444;
+    }
+    .model-perks li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .model-perks li span {
+      color: var(--gold-brass, #B7955B);
+      font-weight: 700;
+    }
+
+    .standards-section {
+      padding: 85px 6.5%;
+      background: #042426;
+      color: #FFFFFF;
+      position: relative;
+    }
+    .standards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      margin-top: 36px;
+    }
+    @media (max-width: 820px) {
+      .standards-grid { grid-template-columns: 1fr; }
+    }
+    .standard-box {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(198, 170, 112, 0.25);
+      padding: 28px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+    .standard-box strong {
+      font-family: var(--serif, 'Playfair Display', serif);
+      font-size: 18px;
+      color: var(--gold-champagne, #E6D2A8);
+      display: block;
+      margin-bottom: 6px;
+    }
+    .standard-box p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: rgba(250, 247, 240, 0.85);
+      margin: 0;
+    }
+
+    .creator-form-section {
+      padding: 90px 6.5%;
+      background: var(--ivory, #FAF7F0);
+    }
+    .creator-form-card {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      padding: clamp(32px, 5vw, 56px);
+      border: 1px solid var(--gold, #B7955B);
+      border-radius: 6px;
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.06);
+    }
+  </style>
+</head>
+<body>
+  <!-- Master Top Navigation Bar -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="/" aria-label="The Belle Amoura Retreat home">
+        <div class="brand-logo-frame">
+          <img src="/assets/logo.png" alt="The Belle Amoura Retreat Official Logo" class="official-logo-img">
+        </div>
+        <div class="brand-title-wrap">
+          <span class="brand-name">THE BELLE AMOURA RETREAT</span>
+          <span class="brand-subtitle">THE WORLD, THOUGHTFULLY YOURS</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <a class="nav-cta" href="/book-your-escape.html">Plan your escape <span>↗</span></a>
+        <button class="menu-toggle" id="menu-toggle-btn" type="button" aria-label="Open navigation" aria-expanded="false" onclick="window.__toggleRetreatDrawer && window.__toggleRetreatDrawer(event)">
+          <span class="menu-icon">&#9776;</span>
+          <span class="menu-text">Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Slide-Out Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation drawer">
+    <div class="drawer-panel">
+      <div>
+        <div class="drawer-header">
+          <a class="brand" href="/" style="color: #FFFFFF;">
+            <div class="brand-logo-frame">
+              <img src="/assets/logo-emblem.png" alt="The Belle Amoura Retreat Official Logo" class="official-logo-img">
+            </div>
+            <div class="brand-title-wrap">
+              <span class="brand-name" style="color: #FFFFFF;">THE BELLE AMOURA RETREAT</span>
+              <span class="brand-subtitle" style="color: var(--gold-champagne, #E6D2A8);">THE WORLD, THOUGHTFULLY YOURS</span>
+            </div>
+          </a>
+          <button class="drawer-close" id="drawer-close-btn" type="button" aria-label="Close menu">&times;</button>
+        </div>
+
+        <nav class="drawer-links" aria-label="Drawer navigation">
+          <a href="/">Home <span>↗</span></a>
+          <a href="/about.html">Our story <span>↗</span></a>
+          <a href="/experiences.html">Experiences <span>↗</span></a>
+          <a href="/gallery.html">Visual gallery <span>↗</span></a>
+          <a href="/journal.html">The Journal <span>↗</span></a>
+          <a href="/investors.html">Investors &amp; Partners <span>↗</span></a>
+          <a href="/careers.html">Careers &amp; Board <span>↗</span></a>
+          <a href="/influencers.html">Influencer Alliance <span>↗</span></a>
+          <a href="/legal.html">Legal &amp; Governance <span>↗</span></a>
+          <a href="/book-your-escape.html">Plan your escape <span>↗</span></a>
+          <a href="/contact.html">Contact concierge <span>↗</span></a>
+        </nav>
+      </div>
+
+      <div class="drawer-contact">
+        <span style="font-weight: 700; color: #FFFFFF; text-transform: uppercase; letter-spacing: 0.16em;">Concierge Liaison Desk</span>
+        <a href="tel:+254706168307">+254 706 168 307 (Direct)</a>
+        <a href="https://wa.me/254706168307" target="_blank" rel="noopener noreferrer">WhatsApp Priority Messaging ↗</a>
+        <a href="mailto:thebelleamouraretreat@gmail.com">thebelleamouraretreat@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="influencer-hero">
+      <div class="influencer-hero-scrim"></div>
+      <div class="influencer-hero-inner">
+        <p class="hero-eyebrow">THE CREATIVE ALLIANCE · LUXURY RESIDENCIES</p>
+        <h1>Curating the extraordinary,<br><em>together.</em></h1>
+        <p>We partner with visual storytellers, travel tastemakers, and photographers whose work celebrates architectural sanctuaries, slow living, and unhurried exploration.</p>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <a class="btn-peacock" href="#apply-creative">Propose a Creative Collaboration <span>↗</span></a>
+          <a class="btn-gold-outline" href="#models">Explore Collaboration Models ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 Collaboration Models -->
+    <section class="models-section" id="models">
+      <div style="max-width: 680px;">
+        <span class="section-label">HOW WE CORRELATE</span>
+        <h2 class="section-title">Three considered ways to<br><em>collaborate with our house.</em></h2>
+        <p style="font-size: 14px; line-height: 1.85; color: var(--text-muted); margin-top: 14px;">
+          We move past disposable sponsored content. Our partnerships are built on genuine artistic immersion, high aesthetic fidelity, and lasting commercial correlation.
+        </p>
+      </div>
+
+      <div class="models-grid">
+        <!-- Model 1 -->
+        <article class="model-card featured">
+          <div>
+            <span class="model-badge">MODEL 01 · HOSTED RESIDENCIES</span>
+            <h3>Sanctuary Stays &amp; Visual Storytelling</h3>
+            <p>Experience private pool villas in Bali, cliff pavilions on the Amalfi coast, or tented conservancies in Masai Mara in exchange for curated visual assets.</p>
+            <ul class="model-perks">
+              <li><span>✦</span> Hosted luxury villa accommodations &amp; private transfers</li>
+              <li><span>✦</span> Curated culinary inclusions (floating breakfasts, chef dinners)</li>
+              <li><span>✦</span> High-production asset licensing with creator attribution</li>
+              <li><span>✦</span> Featured profiles across The Journal &amp; Gallery moodboards</li>
+            </ul>
+          </div>
+          <div>
+            <a class="btn-peacock" href="#apply-creative" onclick="document.getElementById('inf-model').value='Hosted Sanctuary Residency'">Apply for Residency <span>↗</span></a>
+          </div>
+        </article>
+
+        <!-- Model 2 -->
+        <article class="model-card">
+          <div>
+            <span class="model-badge">MODEL 02 · CO-BRANDED RELEASES</span>
+            <h3>Co-Curated Escape Collections</h3>
+            <p>Launch an exclusive, limited-edition escape series designed collaboratively between you and our master travel curators for your discerning community.</p>
+            <ul class="model-perks">
+              <li><span>✦</span> Bespoke named itinerary (e.g. The Coastal Italian Edit)</li>
+              <li><span>✦</span> Dedicated private liaison link &amp; concierge handling</li>
+              <li><span>✦</span> Curated VIP amenities exclusively for your followers</li>
+              <li><span>✦</span> Joint editorial feature in The Private Journal</li>
+            </ul>
+          </div>
+          <div>
+            <a class="btn-gold-outline" href="#apply-creative" style="color:var(--peacock); border-color:var(--peacock);" onclick="document.getElementById('inf-model').value='Co-Curated Escape Collection'">Propose Escape Drop <span>↗</span></a>
+          </div>
+        </article>
+
+        <!-- Model 3 -->
+        <article class="model-card">
+          <div>
+            <span class="model-badge">MODEL 03 · COMMERCIAL AFFILIATE</span>
+            <h3>Discreet Liaison &amp; Affiliate Tiers</h3>
+            <p>Monetize your travel recommendations with high-ticket commission splits (10%–15%) on confirmed private villa and bespoke journey bookings.</p>
+            <ul class="model-perks">
+              <li><span>✦</span> 10%–15% commission on high-value bookings ($15k–$100k+)</li>
+              <li><span>✦</span> Dedicated concierge WhatsApp code for your audience</li>
+              <li><span>✦</span> Real-time payout ledger via The Amoura Atelier portal</li>
+              <li><span>✦</span> Priority invitation to annual private retreat summits</li>
+            </ul>
+          </div>
+          <div>
+            <a class="btn-gold-outline" href="#apply-creative" style="color:var(--peacock); border-color:var(--peacock);" onclick="document.getElementById('inf-model').value='Commercial Affiliate & Liaison'">Join Affiliate Circle <span>↗</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Standards & Aesthetic Bar -->
+    <section class="standards-section">
+      <div style="max-width: 680px;">
+        <span class="section-label" style="color: var(--gold-champagne);">OUR CURATION ETHOS</span>
+        <h2 style="font-family: var(--serif); font-size: clamp(34px, 4vw, 52px); color: #FFFFFF; margin: 12px 0 16px;">What we look for in our creative partners.</h2>
+        <p style="font-size: 14px; line-height: 1.8; color: rgba(232,244,243,0.85); margin: 0;">We seek partners whose work reflects quiet luxury, architectural respect, and sincere cultural storytelling.</p>
+      </div>
+
+      <div class="standards-grid">
+        <div>
+          <div class="standard-box">
+            <strong>01 / Architectural &amp; Spatial Eye</strong>
+            <p>You appreciate clean lines, negative space, natural light, and the texture of a place—not just posing for snapshots.</p>
+          </div>
+          <div class="standard-box">
+            <strong>02 / Slow &amp; Immersive Rhythm</strong>
+            <p>Your content reflects unhurried exploration: morning quietude, private boat coves, local culinary craft, and mindful travel.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="standard-box">
+            <strong>03 / Engaged, High-Discretion Audience</strong>
+            <p>We prioritize real audience engagement, taste, and trust over vanity follower metrics. Discerning micro-audiences are highly welcome.</p>
+          </div>
+          <div class="standard-box">
+            <strong>04 / Discretion &amp; Serenity</strong>
+            <p>We protect the sanctuary experience for other guests. Professional, discreet filming practices are mandatory.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="creator-form-section" id="apply-creative">
+      <div style="text-align: center; max-width: 680px; margin: 0 auto 36px;">
+        <span class="section-label" style="justify-content: center;">JOIN THE ALLIANCE</span>
+        <h2 class="section-title">Submit your creative proposal.</h2>
+        <p style="font-size: 14px; line-height: 1.8; color: var(--text-muted); margin-top: 10px;">Tell us about your visual perspective, audience demographics, and desired collaboration. We review creator pitches weekly.</p>
+      </div>
+
+      <div class="creator-form-card">
+        <form id="influencer-form" style="display:grid; gap:16px;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+            <div>
+              <label style="display:block; font-size:10px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#0B4F4A; margin-bottom:6px;">Full Name / Creator Pseudonym *</label>
+              <input type="text" id="inf-name" name="name" required placeholder="Elena Vance" style="width:100%; padding:12px; border:1px solid #CCC; background:#FFF; font-size:13px; box-sizing:border-box;">
+            </div>
+            <div>
+              <label style="display:block; font-size:10px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#0B4F4A; margin-bottom:6px;">Email Address *</label>
+              <input type="email" id="inf-email" name="email" required placeholder="elena@vancestudio.com" style="width:100%; padding:12px; border:1px solid #CCC; background:#FFF; font-size:13px; box-sizing:border-box;">
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+            <div>
+              <label style="display:block; font-size:10px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#0B4F4A; margin-bottom:6px;">Primary Handle / Channel *</label>
+              <input type="text" id="inf-handle" name="handle" required placeholder="@elenavance (Instagram / TikTok / YouTube)" style="width:100%; padding:12px; border:1px solid #CCC; background:#FFF; font-size:13px; box-sizing:border-box;">
+            </div>
+            <div>
+              <label style="display:block; font-size:10px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#0B4F4A; margin-bottom:6px;">Collaboration Model *</label>
+              <select id="inf-model" name="platform" required style="width:100%; padding:12px; border:1px solid #CCC; background:#FFF; font-size:13px; box-sizing:border-box;">
+                <option value="Hosted Sanctuary Residency">Hosted Sanctuary Residency</option>
+                <option value="Co-Curated Escape Collection">Co-Curated Escape Collection</option>
+                <option value="Commercial Affiliate & Liaison">Commercial Affiliate &amp; Liaison</option>
+                <option value="Photography & Visual Content Licensing">Photography &amp; Visual Content Licensing</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+            <div>
+              <label style="display:block; font-size:10px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#0B4F4A; margin-bottom:6px;">Audience Reach &amp; Demographics</label>
+              <input type="text" id="inf-reach" name="reach" placeholder="e.g. 120k followers · 5.4% engagement · US / UK" style="width:100%; padding:12px; border:1px solid #CCC; background:#FFF; font-size:13px; box-sizing:border-box;">
+            </div>
+            <div>
+              <label style="display:block; font-size:10px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#0B4F4A; margin-bottom:6px;">Media Kit / Portfolio URL *</label>
+              <input type="url" id="inf-portfolio" name="portfolio" required placeholder="https://vancestudio.com or dropbox link" style="width:100%; padding:12px; border:1px solid #CCC; background:#FFF; font-size:13px; box-sizing:border-box;">
+            </div>
+          </div>
+
+          <div>
+            <label style="display:block; font-size:10px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#0B4F4A; margin-bottom:6px;">Desired Sanctuary / Destination</label>
+            <select id="inf-sanctuary" name="sanctuaryInterest" style="width:100%; padding:12px; border:1px solid #CCC; background:#FFF; font-size:13px; box-sizing:border-box;">
+              <option value="Bali Cliffside Pool Pavilions">Bali Cliffside Pool Pavilions</option>
+              <option value="Amalfi Coast & Capri Private Villa">Amalfi Coast &amp; Capri Villa</option>
+              <option value="Serengeti & Mara Conservation Safari">Serengeti &amp; Mara Safari Camp</option>
+              <option value="Kyoto Machiya & Zen Temple Gardens">Kyoto Machiya &amp; Cultural Immersion</option>
+              <option value="Maldives Overwater Lagoon Pavilions">Maldives Overwater Lagoon Pavilions</option>
+              <option value="Swiss Alps Architectural Chalet">Swiss Alps Architectural Chalet</option>
+            </select>
+          </div>
+
+          <div>
+            <label style="display:block; font-size:10px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#0B4F4A; margin-bottom:6px;">Creative Concept &amp; Storytelling Proposal *</label>
+            <textarea id="inf-proposal" name="proposal" rows="4" required placeholder="Describe your visual approach, content deliverables, expected publishing cadence, and why our retreat resonates with your aesthetic." style="width:100%; padding:12px; border:1px solid #CCC; background:#FFF; font-size:13px; box-sizing:border-box;"></textarea>
+          </div>
+
+          <div id="inf-status" style="display:none; padding:14px; border-radius:3px; font-size:12.5px;"></div>
+
+          <div>
+            <button type="submit" class="btn-peacock" id="inf-submit-btn" style="padding:14px 28px; cursor:pointer;">
+              Submit Creative Proposal <span>↗</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Public Website Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo-row">
+          <div class="footer-logo-frame">
+            <img src="/assets/logo-emblem.png" alt="The Belle Amoura Retreat Logo" class="footer-logo-img">
+          </div>
+          <div>
+            <h2 class="footer-brand-title">THE BELLE AMOURA RETREAT</h2>
+            <span class="footer-brand-subtitle">THE WORLD, THOUGHTFULLY YOURS</span>
+          </div>
+        </div>
+        <p class="footer-brand-desc">Curating remarkable private sanctuaries, unhurried journeys, and singular travel memories worldwide.</p>
+      </div>
+
+      <div class="footer-links-cluster">
+        <div class="footer-col">
+          <h4>Sanctuaries</h4>
+          <ul>
+            <li><a href="/experiences.html#coastal">Coastal &amp; Island</a></li>
+            <li><a href="/experiences.html#safari">Wilderness &amp; Safari</a></li>
+            <li><a href="/experiences.html#culture">Cultural Capitals</a></li>
+            <li><a href="/experiences.html#wellness">Wellness &amp; Spas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>The Retreat</h4>
+          <ul>
+            <li><a href="/about.html">Our story &amp; ethics</a></li>
+            <li><a href="/gallery.html">Visual gallery</a></li>
+            <li><a href="/journal.html">The Journal</a></li>
+            <li><a href="/investors.html">Investors &amp; Partners</a></li>
+            <li><a href="/careers.html">Careers &amp; Board</a></li>
+            <li><a href="/influencers.html">Influencer Alliance</a></li>
+            <li><a href="/legal.html">Legal &amp; Governance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Direct Channels</h4>
+          <ul>
+            <li><a href="mailto:thebelleamouraretreat@gmail.com">thebelleamouraretreat@gmail.com</a></li>
+            <li><a href="tel:+254706168307">+254 706 168 307</a></li>
+            <li><a href="https://wa.me/254706168307" target="_blank" rel="noopener noreferrer">WhatsApp priority ↗</a></li>
+            <li><a href="https://www.instagram.com/thebelleamouraretreat/" target="_blank" rel="noopener noreferrer">Instagram (@thebelleamouraretreat) ↗</a></li>
+            <li><a href="https://www.tiktok.com/@the.belle.amoura.retreat" target="_blank" rel="noopener noreferrer">TikTok (@the.belle.amoura.retreat) ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compact 'Private Journal' Newsletter Signup Component -->
+    <div class="footer-newsletter-wrap">
+      <div class="footer-newsletter-copy">
+        <span class="footer-newsletter-kicker">✦ THE PRIVATE JOURNAL</span>
+        <h3 class="footer-newsletter-title">Receive Considered Dispatches</h3>
+        <p class="footer-newsletter-desc">Periodic private intelligence on unlisted sanctuaries, seasonal openings, and bespoke escapes. Discreet and never frequent.</p>
+      </div>
+
+      <form class="footer-newsletter-form" id="journal-newsletter-form" novalidate>
+        <div class="newsletter-input-group">
+          <input type="email" name="email" class="footer-newsletter-input" id="journal-newsletter-email" placeholder="Enter your email address..." required autocomplete="email" aria-label="Email address for The Private Journal">
+          <button type="submit" class="footer-newsletter-btn" id="journal-newsletter-btn">
+            <span>Subscribe</span>
+            <span class="btn-arrow">↗</span>
+          </button>
+        </div>
+        <div class="newsletter-feedback" id="journal-newsletter-feedback" role="status" aria-live="polite"></div>
+        <div class="newsletter-meta-row">
+          <span class="newsletter-privacy-note">Strictly confidential. No spam. Unsubscribe anytime.</span>
+        </div>
+      </form>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> The Belle Amoura Retreat. All rights reserved.</span>
+      <span>Thoughtfully curated. Personally considered.</span>
+      <div style="display: flex; gap: 16px;">
+        <a href="/legal.html">Legal &amp; Governance</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms &amp; Booking Information</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/nav.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const infForm = document.getElementById('influencer-form');
+      const statusBox = document.getElementById('inf-status');
+      const submitBtn = document.getElementById('inf-submit-btn');
+
+      if (infForm) {
+        infForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span>Transmitting...</span>';
+          }
+
+          const payload = {
+            name: document.getElementById('inf-name').value.trim(),
+            email: document.getElementById('inf-email').value.trim(),
+            handle: document.getElementById('inf-handle').value.trim(),
+            platform: document.getElementById('inf-model').value,
+            reach: document.getElementById('inf-reach').value.trim(),
+            portfolio: document.getElementById('inf-portfolio').value.trim(),
+            sanctuaryInterest: document.getElementById('inf-sanctuary').value,
+            proposal: document.getElementById('inf-proposal').value.trim()
+          };
+
+          try {
+            const res = await fetch('/api/influencer-applications', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            });
+            const data = await res.json().catch(() => ({}));
+
+            if (!res.ok) {
+              throw new Error(data.error || 'Failed to submit proposal.');
+            }
+
+            infForm.reset();
+            if (statusBox) {
+              const waUrl = data.whatsappUrl || 'https://wa.me/254706168307';
+              statusBox.style.display = 'block';
+              statusBox.style.background = '#F0FAF4';
+              statusBox.style.borderLeft = '3px solid #25D366';
+              statusBox.style.color = '#0B4F4A';
+              statusBox.innerHTML = `
+                <div style="font-size:15px; font-weight:700; margin-bottom:6px; color:#063B3D;">
+                  Form submitted successfully. The B.A.R will get back to you as soon as we can
+                </div>
+                <p style="margin:0 0 10px 0; font-size:13px; color:#334155;">
+                  Reference: <code>${data.applicationId || 'CREATIVE-ACK'}</code>. Your creator pitch has been recorded into our CRM.
+                </p>
+                <a href="${waUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px; padding:10px 16px; background:#25D366; color:#063B3D; text-decoration:none; font-weight:700; border-radius:6px; font-size:13px; box-shadow:0 3px 10px rgba(37,211,102,0.3);">
+                  <span>📲 Transmit directly to WhatsApp Concierge (+254 706 168 307) ↗</span>
+                </a>
+              `;
+            }
+          } catch (err) {
+            if (statusBox) {
+              statusBox.style.display = 'block';
+              statusBox.style.background = '#FDE8E8';
+              statusBox.style.borderLeft = '3px solid #C81E1E';
+              statusBox.style.color = '#9B1C1C';
+              statusBox.textContent = err.message || 'There was an issue transmitting your pitch. Please reach out to thebelleamouraretreat@gmail.com.';
+            }
+          } finally {
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = 'Submit Creative Proposal <span>↗</span>';
+            }
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

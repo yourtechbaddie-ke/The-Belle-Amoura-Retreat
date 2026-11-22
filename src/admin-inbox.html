@@ -1,0 +1,1004 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Executive Submissions &amp; Bookings Inbox | The Belle Amoura Retreat</title>
+
+  <link rel="icon" type="image/png" href="/assets/logo-emblem.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/brand-system.css?v=1">
+
+  <style>
+    :root {
+      --obsidian: #07090A;
+      --peacock-dark: #042426;
+      --peacock: #0B4F4A;
+      --peacock-deep: #063B3D;
+      --brass: #B7955B;
+      --brass-hover: #9c7b44;
+      --gold-champagne: #E6D2A8;
+      --pearl: #E9E1D5;
+      --paper: #FAF7F0;
+      --surface-white: #FFFFFF;
+      --line: #E2DAD0;
+      --text-muted: #6E7570;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-body: 'Lora', Georgia, serif;
+      --font-ui: 'Manrope', system-ui, sans-serif;
+      --font-mono: 'DM Mono', monospace;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #F4F1EA;
+      color: var(--obsidian);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Navigation Header */
+    .inbox-topbar {
+      background: var(--peacock-dark);
+      color: var(--pearl);
+      padding: 16px clamp(18px, 4vw, 42px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      border-bottom: 1px solid rgba(183, 149, 91, 0.35);
+    }
+    .topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .topbar-brand-title {
+      font-family: var(--font-serif);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: #FFFFFF;
+    }
+    .topbar-brand-sub {
+      display: block;
+      font-family: var(--font-ui);
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      color: var(--gold-champagne);
+      margin-top: 2px;
+    }
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .owner-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 12px;
+      background: rgba(183, 149, 91, 0.16);
+      border: 1px solid var(--brass);
+      border-radius: 99px;
+      font-family: var(--font-ui);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gold-champagne);
+    }
+    .topbar-link {
+      font-family: var(--font-ui);
+      font-size: 11px;
+      color: var(--pearl);
+      text-decoration: none;
+      padding: 6px 12px;
+      border: 1px solid rgba(233, 225, 213, 0.2);
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .topbar-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Main Container */
+    .inbox-shell {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: clamp(24px, 4vw, 44px) clamp(16px, 3.5vw, 36px) 80px;
+    }
+
+    /* Page Header */
+    .page-lead-bar {
+      margin-bottom: 28px;
+    }
+    .page-eyebrow {
+      font-family: var(--font-ui);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--peacock);
+      font-weight: 700;
+      margin: 0 0 6px;
+    }
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.1;
+      margin: 0 0 10px;
+      color: var(--peacock-deep);
+    }
+    .page-title em {
+      color: var(--brass);
+      font-style: italic;
+    }
+    .page-desc {
+      font-size: 13.5px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      max-width: 780px;
+      margin: 0;
+    }
+
+    /* Notification Explainer Banner */
+    .notify-banner {
+      background: #FFFFFF;
+      border: 1px solid #D5C9B8;
+      border-left: 4px solid var(--brass);
+      padding: 18px 22px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 18px;
+      box-shadow: 0 4px 14px rgba(7, 9, 10, 0.04);
+    }
+    .notify-icon {
+      font-size: 26px;
+      color: var(--brass);
+    }
+    .notify-text h3 {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      margin: 0 0 4px;
+      color: var(--peacock-deep);
+    }
+    .notify-text p {
+      font-size: 12px;
+      line-height: 1.65;
+      color: #555E59;
+      margin: 0;
+    }
+    .notify-text code {
+      background: #EFEBE4;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--peacock-deep);
+    }
+
+    /* Stats Overview Strip */
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+    .metric-card {
+      background: var(--surface-white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .metric-card:hover, .metric-card.active-tab {
+      border-color: var(--peacock);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(7, 59, 61, 0.08);
+    }
+    .metric-card.active-tab {
+      background: #FAF7F0;
+      border-color: var(--brass);
+      box-shadow: 0 0 0 2px var(--brass);
+    }
+    .metric-label {
+      font-family: var(--font-ui);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .metric-val {
+      font-family: var(--font-serif);
+      font-size: 34px;
+      font-weight: 600;
+      color: var(--peacock-deep);
+      margin: 10px 0 2px;
+    }
+    .metric-sub {
+      font-family: var(--font-ui);
+      font-size: 11px;
+      color: #7D8882;
+    }
+
+    /* Controls Bar */
+    .controls-bar {
+      background: var(--surface-white);
+      border: 1px solid var(--line);
+      border-radius: 8px 8px 0 0;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      border-bottom: 2px solid var(--peacock);
+    }
+    .tab-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .tab-pill {
+      background: transparent;
+      border: 1px solid var(--line);
+      border-radius: 99px;
+      padding: 7px 14px;
+      font-family: var(--font-ui);
+      font-size: 11px;
+      font-weight: 600;
+      color: #555E59;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: all 0.2s;
+    }
+    .tab-pill:hover {
+      border-color: var(--peacock);
+      color: var(--peacock);
+    }
+    .tab-pill.active {
+      background: var(--peacock-deep);
+      border-color: var(--peacock-deep);
+      color: #FFFFFF;
+    }
+    .tab-badge {
+      background: var(--brass);
+      color: #FFFFFF;
+      font-size: 9px;
+      padding: 2px 6px;
+      border-radius: 99px;
+      font-weight: 700;
+    }
+    .active .tab-badge {
+      background: #FFFFFF;
+      color: var(--peacock-deep);
+    }
+    .action-btns {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-action {
+      font-family: var(--font-ui);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .btn-action-primary {
+      background: var(--peacock-deep);
+      color: #FFFFFF;
+      border: 1px solid var(--peacock-deep);
+    }
+    .btn-action-primary:hover {
+      background: var(--peacock);
+    }
+    .btn-action-outline {
+      background: transparent;
+      color: var(--peacock-deep);
+      border: 1px solid #C4BAB0;
+    }
+    .btn-action-outline:hover {
+      border-color: var(--peacock);
+      background: #FAF7F0;
+    }
+
+    /* Table & Content Area */
+    .table-container {
+      background: var(--surface-white);
+      border: 1px solid var(--line);
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+      overflow-x: auto;
+      box-shadow: 0 8px 24px rgba(7, 9, 10, 0.03);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 12.5px;
+      min-width: 900px;
+    }
+    thead th {
+      background: #F2EFE9;
+      font-family: var(--font-ui);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--peacock-dark);
+      padding: 13px 18px;
+      border-bottom: 1px solid var(--line);
+      white-space: nowrap;
+    }
+    tbody tr {
+      border-bottom: 1px solid #ECE7DF;
+      transition: background 0.15s;
+    }
+    tbody tr:hover {
+      background: #FAF8F4;
+    }
+    tbody td {
+      padding: 16px 18px;
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .status-pill {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 99px;
+      font-family: var(--font-ui);
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .status-new { background: #E1EFEA; color: #08534C; border: 1px solid #B0D5CB; }
+    .status-in_planning { background: #FEF3C7; color: #92400E; border: 1px solid #FDE68A; }
+    .status-confirmed { background: #D1FAE5; color: #065F46; border: 1px solid #A7F3D0; }
+    .status-reviewing { background: #EFF6FF; color: #1E40AF; border: 1px solid #BFDBFE; }
+
+    .guest-name {
+      font-family: var(--font-serif);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--obsidian);
+      display: block;
+      margin-bottom: 3px;
+    }
+    .guest-contact {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: var(--font-ui);
+    }
+    .guest-contact a {
+      color: var(--peacock);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .msg-preview {
+      max-width: 380px;
+      color: #4A524D;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      font-size: 12px;
+    }
+    .date-stamp {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      color: #7D8882;
+      white-space: nowrap;
+    }
+    .action-links {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .btn-table-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-family: var(--font-ui);
+      font-size: 10.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    .btn-table-email {
+      background: var(--peacock-deep);
+      color: #FFFFFF;
+    }
+    .btn-table-email:hover {
+      background: var(--peacock);
+    }
+    .btn-table-wa {
+      background: #25D366;
+      color: #FFFFFF;
+    }
+    .btn-table-wa:hover {
+      background: #1EBE5D;
+    }
+
+    .empty-state {
+      padding: 55px 20px;
+      text-align: center;
+      color: var(--text-muted);
+    }
+    .empty-symbol {
+      font-size: 32px;
+      color: var(--brass);
+      margin-bottom: 10px;
+    }
+
+    /* Modal for Full Detail View */
+    .detail-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(7, 9, 10, 0.7);
+      backdrop-filter: blur(4px);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .detail-modal.show {
+      display: flex;
+    }
+    .detail-dialog {
+      background: #FFFFFF;
+      max-width: 650px;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--brass);
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+    .dialog-header {
+      background: var(--peacock-dark);
+      color: #FFFFFF;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .dialog-header h3 {
+      margin: 0;
+      font-family: var(--font-serif);
+      font-size: 18px;
+    }
+    .dialog-close {
+      background: none;
+      border: none;
+      color: var(--pearl);
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .dialog-body {
+      padding: 24px;
+      max-height: 75vh;
+      overflow-y: auto;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    .dialog-row {
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #ECE7DF;
+    }
+    .dialog-row strong {
+      display: block;
+      font-family: var(--font-ui);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--peacock-deep);
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 768px) {
+      .notify-banner { grid-template-columns: 1fr; }
+      .controls-bar { flex-direction: column; align-items: flex-start; }
+      .action-btns { width: 100%; justify-content: space-between; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="inbox-topbar">
+    <a class="topbar-brand" href="/">
+      <div class="brand-logo-frame" style="width: 38px; height: 38px;">
+        <img src="/assets/logo-emblem.png" alt="The Belle Amoura Retreat Official Emblem" class="official-logo-img">
+      </div>
+      <div>
+        <span class="topbar-brand-title">THE BELLE AMOURA RETREAT</span>
+        <span class="topbar-brand-sub">EXECUTIVE COMMAND &amp; SUBMISSIONS INBOX</span>
+      </div>
+    </a>
+    <div class="topbar-actions">
+      <span class="owner-badge">🔒 Founder / Owner Workspace</span>
+      <a class="topbar-link" href="/admin-portal.html">← Admin Portal</a>
+      <a class="topbar-link" href="/">Public Retreat ↗</a>
+    </div>
+  </header>
+
+  <main class="inbox-shell">
+    
+    <!-- Page Header -->
+    <div class="page-lead-bar">
+      <p class="page-eyebrow">CENTRALIZED INTAKE ENGINE · ALL PLATFORMS</p>
+      <h1 class="page-title">Where do submissions go? <em>Directly to you.</em></h1>
+      <p class="page-desc">Every travel booking inquiry, contractor application, legal counsel proposal, influencer media kit, and investor expression of interest transmits straight into this central dashboard. You can review them in real time, reply immediately via email or WhatsApp, and export full records to CSV.</p>
+    </div>
+
+    <!-- Notification Explainer Banner -->
+    <div class="notify-banner">
+      <div class="notify-icon">🔔</div>
+      <div class="notify-text">
+        <h3>How will you know when someone submits?</h3>
+        <p>
+          <strong>1. Live In-App Dashboard &amp; CRM:</strong> This page and the In-Built CRM Database (<code>/admin-portal.html</code>) update live immediately with every submission.<br>
+          <strong>2. Instant WhatsApp Mobile Webhook:</strong> Requests format and route directly to your WhatsApp mobile inbox at <code>+254 706 168 307</code>.<br>
+          <strong>3. Direct Contact Channels:</strong> Direct email at <code>thebelleamouraretreat@gmail.com</code> and mobile concierge at <code>+254 706 168 307</code>.
+        </p>
+      </div>
+      <div>
+        <button type="button" class="btn-action btn-action-primary" onclick="loadAllData(true)">🔄 Refresh Now</button>
+      </div>
+    </div>
+
+    <!-- Overview Metric Cards -->
+    <div class="metric-grid">
+      <div class="metric-card active-tab" onclick="switchTab('inquiries')" id="card-inquiries">
+        <div class="metric-label"><span>Travel Bookings</span> <span>🌴</span></div>
+        <div class="metric-val" id="metric-inquiries">2</div>
+        <div class="metric-sub">Escape inquiries &amp; concierge requests</div>
+      </div>
+      <div class="metric-card" onclick="switchTab('careers')" id="card-careers">
+        <div class="metric-label"><span>Talent &amp; Legal</span> <span>⚖️</span></div>
+        <div class="metric-val" id="metric-careers">0</div>
+        <div class="metric-sub">Consultants, General Counsel &amp; Marketers</div>
+      </div>
+      <div class="metric-card" onclick="switchTab('influencers')" id="card-influencers">
+        <div class="metric-label"><span>Influencer Alliance</span> <span>❀</span></div>
+        <div class="metric-val" id="metric-influencers">1</div>
+        <div class="metric-sub">Hosted residencies &amp; creator kits</div>
+      </div>
+      <div class="metric-card" onclick="switchTab('investors')" id="card-investors">
+        <div class="metric-label"><span>Investor Capital</span> <span>💼</span></div>
+        <div class="metric-val" id="metric-investors">2</div>
+        <div class="metric-sub">Strategic capital expressions</div>
+      </div>
+      <div class="metric-card" onclick="switchTab('subscribers')" id="card-subscribers">
+        <div class="metric-label"><span>Journal Subscribers</span> <span>✉️</span></div>
+        <div class="metric-val" id="metric-subscribers">1</div>
+        <div class="metric-sub">Private newsletter community</div>
+      </div>
+    </div>
+
+    <!-- Controls Bar -->
+    <div class="controls-bar">
+      <div class="tab-pills" role="tablist">
+        <button type="button" class="tab-pill active" id="tab-inquiries" onclick="switchTab('inquiries')">
+          🌴 Travel Inquiries <span class="tab-badge" id="badge-inquiries">2</span>
+        </button>
+        <button type="button" class="tab-pill" id="tab-careers" onclick="switchTab('careers')">
+          ⚖️ Career &amp; Legal Retainers <span class="tab-badge" id="badge-careers">0</span>
+        </button>
+        <button type="button" class="tab-pill" id="tab-influencers" onclick="switchTab('influencers')">
+          ❀ Influencer Pitches <span class="tab-badge" id="badge-influencers">1</span>
+        </button>
+        <button type="button" class="tab-pill" id="tab-investors" onclick="switchTab('investors')">
+          💼 Investor Enquiries <span class="tab-badge" id="badge-investors">2</span>
+        </button>
+        <button type="button" class="tab-pill" id="tab-subscribers" onclick="switchTab('subscribers')">
+          ✉️ Journal Subscribers <span class="tab-badge" id="badge-subscribers">1</span>
+        </button>
+      </div>
+
+      <div class="action-btns">
+        <button type="button" class="btn-action btn-action-outline" onclick="exportCurrentCSV()">📥 Export CSV</button>
+        <button type="button" class="btn-action btn-action-primary" onclick="loadAllData(true)">🔄 Sync Queue</button>
+      </div>
+    </div>
+
+    <!-- Submissions Table -->
+    <div class="table-container">
+      <table id="main-table">
+        <thead id="table-head">
+          <!-- Dynamically populated based on active tab -->
+        </thead>
+        <tbody id="table-body">
+          <tr>
+            <td colspan="6" class="empty-state">
+              <div class="empty-symbol">✧</div>
+              <strong>Loading active submissions…</strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <!-- Detail Inspection Modal -->
+  <div class="detail-modal" id="detail-modal" onclick="closeModal(event)">
+    <div class="detail-dialog" onclick="event.stopPropagation()">
+      <div class="dialog-header">
+        <h3 id="modal-title">Submission Details</h3>
+        <button type="button" class="dialog-close" onclick="closeModal()">✕</button>
+      </div>
+      <div class="dialog-body" id="modal-body">
+        <!-- Dynamically rendered fields -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let activeTab = 'inquiries';
+    let rawData = {
+      inquiries: [],
+      careers: [],
+      influencers: [],
+      investors: [],
+      subscribers: []
+    };
+
+    function esc(v) {
+      return String(v ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+    }
+
+    function timeAgo(dateString) {
+      if (!dateString) return '—';
+      const d = new Date(dateString);
+      if (isNaN(d.getTime())) return String(dateString);
+      return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) + ' ' + d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+
+    async function loadAllData(announce = false) {
+      try {
+        const [rInq, rCar, rInf, rInv, rSub] = await Promise.all([
+          fetch('/api/inquiries').then(r => r.json()).catch(() => ({ inquiries: [] })),
+          fetch('/api/career-applications').then(r => r.json()).catch(() => ({ applications: [] })),
+          fetch('/api/influencer-applications').then(r => r.json()).catch(() => ({ applications: [] })),
+          fetch('/api/investor-leads').then(r => r.json()).catch(() => ({ leads: [] })),
+          fetch('/api/newsletter').then(r => r.json()).catch(() => ({ subscribers: [] }))
+        ]);
+
+        rawData.inquiries = rInq.inquiries || [];
+        rawData.careers = rCar.applications || [];
+        rawData.influencers = rInf.applications || [];
+        rawData.investors = rInv.leads || [];
+        rawData.subscribers = rSub.subscribers || [];
+
+        // Update counts
+        document.getElementById('metric-inquiries').textContent = rawData.inquiries.length;
+        document.getElementById('metric-careers').textContent = rawData.careers.length;
+        document.getElementById('metric-influencers').textContent = rawData.influencers.length;
+        document.getElementById('metric-investors').textContent = rawData.investors.length;
+        document.getElementById('metric-subscribers').textContent = rawData.subscribers.length;
+
+        document.getElementById('badge-inquiries').textContent = rawData.inquiries.length;
+        document.getElementById('badge-careers').textContent = rawData.careers.length;
+        document.getElementById('badge-influencers').textContent = rawData.influencers.length;
+        document.getElementById('badge-investors').textContent = rawData.investors.length;
+        document.getElementById('badge-subscribers').textContent = rawData.subscribers.length;
+
+        renderActiveTab();
+        if (announce) {
+          alert('Queue synchronized. All live records are up to date.');
+        }
+      } catch (err) {
+        console.error('Error fetching submission records:', err);
+      }
+    }
+
+    function switchTab(tab) {
+      activeTab = tab;
+      document.querySelectorAll('.tab-pill').forEach(b => b.classList.toggle('active', b.id === 'tab-' + tab));
+      document.querySelectorAll('.metric-card').forEach(c => c.classList.toggle('active-tab', c.id === 'card-' + tab));
+      renderActiveTab();
+    }
+
+    function renderActiveTab() {
+      const thead = document.getElementById('table-head');
+      const tbody = document.getElementById('table-body');
+
+      if (activeTab === 'inquiries') {
+        thead.innerHTML = `
+          <tr>
+            <th>Status</th>
+            <th>Received</th>
+            <th>Guest / Contact</th>
+            <th>Sanctuary &amp; Timing</th>
+            <th>Travellers &amp; Vision</th>
+            <th>Actions</th>
+          </tr>
+        `;
+        const list = rawData.inquiries;
+        if (!list.length) {
+          tbody.innerHTML = `<tr><td colspan="6" class="empty-state"><div class="empty-symbol">🌴</div><strong>No travel inquiries submitted yet.</strong><p>When prospective patrons fill out "Book Your Escape" or concierge forms, they appear here.</p></td></tr>`;
+          return;
+        }
+        tbody.innerHTML = list.map((item, idx) => `
+          <tr>
+            <td><span class="status-pill status-${item.status || 'new'}">${esc(item.status || 'NEW')}</span></td>
+            <td><span class="date-stamp">${timeAgo(item.created_at)}</span></td>
+            <td>
+              <span class="guest-name">${esc(item.name)}</span>
+              <div class="guest-contact">
+                <a href="mailto:${esc(item.email)}?subject=Your%20Belle%20Amoura%20Retreat%20Enquiry">${esc(item.email)}</a>
+              </div>
+            </td>
+            <td>
+              <strong>${esc(item.destination || 'Open Destination')}</strong>
+              <div style="font-size:11px;color:#7D8882;">Timing: ${esc(item.timing || 'Not specified')}</div>
+            </td>
+            <td>
+              <div style="font-size:11px;font-weight:600;color:var(--peacock-deep);">${esc(item.travellers || '2 travellers')} · ${esc(item.interest || 'Curated escape')}</div>
+              <div class="msg-preview">${esc(item.message || 'No additional notes provided.')}</div>
+            </td>
+            <td>
+              <div class="action-links">
+                <a class="btn-table-action btn-table-email" href="mailto:${esc(item.email)}?subject=The%20Belle%20Amoura%20Retreat%20%E2%80%94%20Your%20Escape%20To%20${encodeURIComponent(item.destination || 'Sanctuary')}">✉️ Reply to Guest</a>
+                <a class="btn-table-action btn-table-wa" href="https://wa.me/254706168307" target="_blank">💬 WhatsApp</a>
+                <button type="button" style="border:none;background:none;color:var(--peacock);font-size:11px;text-align:left;padding:2px 0;cursor:pointer;text-decoration:underline;" onclick="inspectItem('inquiries', ${idx})">View Dossier ↗</button>
+              </div>
+            </td>
+          </tr>
+        `).join('');
+
+      } else if (activeTab === 'careers') {
+        thead.innerHTML = `
+          <tr>
+            <th>Status</th>
+            <th>Received</th>
+            <th>Applicant / Talent</th>
+            <th>Role Applied</th>
+            <th>Location &amp; Experience</th>
+            <th>Actions</th>
+          </tr>
+        `;
+        const list = rawData.careers;
+        if (!list.length) {
+          tbody.innerHTML = `<tr><td colspan="6" class="empty-state"><div class="empty-symbol">⚖️</div><strong>No career applications received yet.</strong><p>When candidates apply for Legal Counsel, Travel Consultant, or Sales/Marketing positions, they appear here.</p></td></tr>`;
+          return;
+        }
+        tbody.innerHTML = list.map((item, idx) => `
+          <tr>
+            <td><span class="status-pill status-${item.status || 'new'}">${esc(item.status || 'NEW')}</span></td>
+            <td><span class="date-stamp">${timeAgo(item.created_at)}</span></td>
+            <td>
+              <span class="guest-name">${esc(item.name)}</span>
+              <div class="guest-contact">
+                <a href="mailto:${esc(item.email)}?subject=The%20Belle%20Amoura%20Retreat%20%E2%80%94%20Application%20for%20${encodeURIComponent(item.role || 'Role')}">${esc(item.email)}</a>
+                ${item.phone ? ` • <span>${esc(item.phone)}</span>` : ''}
+              </div>
+            </td>
+            <td>
+              <strong style="color:var(--peacock-deep);">${esc(item.role || 'General Application')}</strong>
+              ${item.portfolio ? `<div style="font-size:11px;"><a href="${esc(item.portfolio)}" target="_blank" rel="noopener">Portfolio / LinkedIn ↗</a></div>` : ''}
+            </td>
+            <td>
+              <div style="font-size:11px;">📍 ${esc(item.location || 'Remote')}</div>
+              <div style="font-size:11px;color:#7D8882;">Experience: ${esc(item.experience || 'Not specified')}</div>
+              <div class="msg-preview">${esc(item.message || '')}</div>
+            </td>
+            <td>
+              <div class="action-links">
+                <a class="btn-table-action btn-table-email" href="mailto:${esc(item.email)}?subject=The%20Belle%20Amoura%20Retreat%20%E2%80%94%20Next%20Steps%20for%20${encodeURIComponent(item.role || 'Role')}">✉️ Email Candidate</a>
+                <button type="button" style="border:none;background:none;color:var(--peacock);font-size:11px;text-align:left;padding:2px 0;cursor:pointer;text-decoration:underline;" onclick="inspectItem('careers', ${idx})">Inspect Application ↗</button>
+              </div>
+            </td>
+          </tr>
+        `).join('');
+
+      } else if (activeTab === 'influencers') {
+        thead.innerHTML = `
+          <tr>
+            <th>Status</th>
+            <th>Received</th>
+            <th>Creator / Handle</th>
+            <th>Platform &amp; Audience</th>
+            <th>Sanctuary Focus &amp; Proposal</th>
+            <th>Actions</th>
+          </tr>
+        `;
+        const list = rawData.influencers;
+        if (!list.length) {
+          tbody.innerHTML = `<tr><td colspan="6" class="empty-state"><div class="empty-symbol">❀</div><strong>No influencer proposals yet.</strong><p>Creator applications from the Influencer Residence page appear here.</p></td></tr>`;
+          return;
+        }
+        tbody.innerHTML = list.map((item, idx) => `
+          <tr>
+            <td><span class="status-pill status-${item.status || 'new'}">${esc(item.status || 'NEW')}</span></td>
+            <td><span class="date-stamp">${timeAgo(item.created_at)}</span></td>
+            <td>
+              <span class="guest-name">${esc(item.name)}</span>
+              <div class="guest-contact">
+                <strong>${esc(item.handle || '@creator')}</strong><br>
+                <a href="mailto:${esc(item.email)}">${esc(item.email)}</a>
+              </div>
+            </td>
+            <td>
+              <strong style="color:var(--peacock-deep);">${esc(item.platform || 'Instagram / TikTok')}</strong>
+              <div style="font-size:11px;color:#7D8882;">Reach: ${esc(item.reach || 'Private')}</div>
+              ${item.portfolio ? `<div style="font-size:11px;"><a href="${esc(item.portfolio)}" target="_blank" rel="noopener">Media Kit ↗</a></div>` : ''}
+            </td>
+            <td>
+              <div style="font-size:11px;font-weight:600;color:var(--brass);">Target: ${esc(item.sanctuaryInterest || 'All Sanctuaries')}</div>
+              <div class="msg-preview">${esc(item.proposal || '')}</div>
+            </td>
+            <td>
+              <div class="action-links">
+                <a class="btn-table-action btn-table-email" href="mailto:${esc(item.email)}?subject=The%20Belle%20Amoura%20Retreat%20%E2%80%94%20Creator%20Alliance%20Collaboration">✉️ Invite Creator</a>
+                <button type="button" style="border:none;background:none;color:var(--peacock);font-size:11px;text-align:left;padding:2px 0;cursor:pointer;text-decoration:underline;" onclick="inspectItem('influencers', ${idx})">View Proposal ↗</button>
+              </div>
+            </td>
+          </tr>
+        `).join('');
+
+      } else if (activeTab === 'investors') {
+        thead.innerHTML = `
+          <tr>
+            <th>Status</th>
+            <th>Received</th>
+            <th>Investor / Entity</th>
+            <th>Indicative Range</th>
+            <th>Thesis &amp; Focus</th>
+            <th>Actions</th>
+          </tr>
+        `;
+        const list = rawData.investors;
+        if (!list.length) {
+          tbody.innerHTML = `<tr><td colspan="6" class="empty-state"><div class="empty-symbol">💼</div><strong>No investor inquiries yet.</strong></td></tr>`;
+          return;
+        }
+        tbody.innerHTML = list.map((item, idx) => `
+          <tr>
+            <td><span class="status-pill status-${item.status || 'new'}">${esc(item.status || 'NEW')}</span></td>
+            <td><span class="date-stamp">${timeAgo(item.created_at)}</span></td>
+            <td>
+              <span class="guest-name">${esc(item.name)}</span>
+              <div class="guest-contact">
+                <strong>${esc(item.role || 'Principal')}</strong> · ${esc(item.organization || 'Private')}<br>
+                <a href="mailto:${esc(item.email)}">${esc(item.email)}</a> ${item.phone ? `• ${esc(item.phone)}` : ''}
+              </div>
+            </td>
+            <td>
+              <strong style="color:var(--peacock-deep);">${esc(item.investment_range || 'Not specified')}</strong>
+              <div style="font-size:11px;color:#7D8882;">Interest: ${esc(item.interest || 'Strategic')}</div>
+            </td>
+            <td>
+              <div style="font-size:11px;color:#7D8882;">📍 ${esc(item.location || 'Global')}</div>
+              <div class="msg-preview">${esc(item.message || '')}</div>
+            </td>
+            <td>
+              <div class="action-links">
+                <a class="btn-table-action btn-table-email" href="mailto:${esc(item.email)}?subject=The%20Belle%20Amoura%20Retreat%20%E2%80%94%20Investor%20Relations">✉️ Direct Founder Reply</a>
+                <button type="button" style="border:none;background:none;color:var(--peacock);font-size:11px;text-align:left;padding:2px 0;cursor:pointer;text-decoration:underline;" onclick="inspectItem('investors', ${idx})">Full Thesis ↗</button>
+              </div>
+            </td>
+          </tr>
+        `).join('');
+
+      } else if (activeTab === 'subscribers') {
+        thead.innerHTML = `
+          <tr>
+            <th>Status</th>
+            <th>Subscribed At</th>
+            <th>Subscriber Email</th>
+            <th>Channel Source</th>
+            <th>Actions</th>
+          </tr>
+        `;
+        const list = rawData.subscribers;
+        if (!list.length) {
+          tbody.innerHTML = `<tr><td colspan="5" class="empty-state"><div class="empty-symbol">✉️</div><strong>No subscribers yet.</strong></td></tr>`;
+          return;
+        }
+        tbody.innerHTML = list.map(item => `
+          <tr>
+            <td><span class="status-pill status-confirmed">SUBSCRIBED</span></td>
+            <td><span class="date-stamp">${timeAgo(item.subscribed_at)}</span></td>
+            <td>
+              <strong style="font-size:14px;color:var(--obsidian);">${esc(item.email)}</strong>
+            </td>
+            <td>
+              <span style="font-family:var(--font-mono);font-size:11px;color:#7D8882;">${esc(item.source || 'footer_journal')}</span>
+            </td>
+            <td>
+              <a class="btn-table-action btn-table-email" href="mailto:${esc(item.email)}?subject=The%20Belle%20Amoura%20Private%20Journal">✉️ Send Dispatch</a>
+            </td>
+          </tr>
+        `).join('');
+      }
+    }
+
+    function inspectItem(category, index) {
+      const item = rawData[category][index];
+      if (!item) return;
+
+      const title = document.getElementById('modal-title');
+      const body = document.getElementById('modal-body');
+
+      title.textContent = item.name ? `${item.name} · Full Record` : 'Submission Dossier';
+      
+      let html = '';
+      for (const [key, val] of Object.entries(item)) {
+        if (typeof val === 'object') continue;
+        html += `
+          <div class="dialog-row">
+            <strong>${esc(key.replace(/_/g, ' '))}</strong>
+            <div>${esc(String(val))}</div>
+          </div>
+        `;
+      }
+
+      body.innerHTML = html;
+      document.getElementById('detail-modal').classList.add('show');
+    }
+
+    function closeModal() {
+      document.getElementById('detail-modal').classList.remove('show');
+    }
+
+    function exportCurrentCSV() {
+      const list = rawData[activeTab];
+      if (!list || !list.length) {
+        alert('There are no records in this tab to export yet.');
+        return;
+      }
+      const keys = Object.keys(list[0]);
+      const csvRows = [
+        keys.join(','),
+        ...list.map(row => keys.map(k => `"${String(row[k] ?? '').replace(/"/g, '""')}"`).join(','))
+      ];
+      const blob = new Blob([csvRows.join('\r\n')], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `belle-amoura-${activeTab}-${new Date().toISOString().slice(0, 10)}.csv`;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    // Auto-load on mount
+    document.addEventListener('DOMContentLoaded', () => {
+      loadAllData();
+      // Auto-poll every 30 seconds
+      setInterval(() => loadAllData(false), 30000);
+    });
+  </script>
+</body>
+</html>

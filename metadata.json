@@ -1,0 +1,8 @@
+{
+  "name": "The Belle Amoura Retreat",
+  "description": "Global luxury travel agency and private retreat house headquartered in Nairobi, Kenya. Handcrafted bespoke safaris, private island buyouts, superyachts, turnkey executive travel retainers, and angel hospitality syndicates worldwide.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

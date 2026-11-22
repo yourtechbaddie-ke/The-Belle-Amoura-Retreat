@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Flagship Global Travel Agency & Private Retreats -->
+  <url>
+    <loc>https://thebelleamouraretreat.com/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thebelleamouraretreat.com/"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://thebelleamouraretreat.com/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://thebelleamouraretreat.com/"/>
+    <xhtml:link rel="alternate" hreflang="en-EU" href="https://thebelleamouraretreat.com/"/>
+    <xhtml:link rel="alternate" hreflang="en-AE" href="https://thebelleamouraretreat.com/"/>
+    <xhtml:link rel="alternate" hreflang="en-KE" href="https://thebelleamouraretreat.com/"/>
+    <xhtml:link rel="alternate" hreflang="en-CH" href="https://thebelleamouraretreat.com/"/>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://thebelleamouraretreat.com/"/>
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://thebelleamouraretreat.com/"/>
+    <xhtml:link rel="alternate" hreflang="en-SG" href="https://thebelleamouraretreat.com/"/>
+  </url>
+
+  <!-- Global High-Intent Intake & Confidential Booking Questionnaire -->
+  <url>
+    <loc>https://thebelleamouraretreat.com/book-your-escape.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thebelleamouraretreat.com/book-your-escape.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thebelleamouraretreat.com/book-your-escape.html"/>
+  </url>
+
+  <!-- Curated Global Experiences, Safaris, Private Jets & Superyachts -->
+  <url>
+    <loc>https://thebelleamouraretreat.com/experiences.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thebelleamouraretreat.com/experiences.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thebelleamouraretreat.com/experiences.html"/>
+  </url>
+
+  <!-- Startup Travel Angel Investment & Luxury Hospitality Syndicates -->
+  <url>
+    <loc>https://thebelleamouraretreat.com/investors.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thebelleamouraretreat.com/investors.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thebelleamouraretreat.com/investors.html"/>
+  </url>
+
+  <!-- Private Sovereign Concierge Suite (C-Suite & Diplomatic Retainers) -->
+  <url>
+    <loc>https://thebelleamouraretreat.com/the-sovereign-suite</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Atelier Bespoke Travel Design -->
+  <url>
+    <loc>https://thebelleamouraretreat.com/the-amoura-atelier</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Meridian Exchange (Curated Currencies & Travel Retainers) -->
+  <url>
+    <loc>https://thebelleamouraretreat.com/the-meridian-exchange</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Amoura Alliance (B2B Travel Syndicates & Hotel Collections) -->
+  <url>
+    <loc>https://thebelleamouraretreat.com/the-amoura-alliance</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Discerning Creator & Influencer Alliance -->
+  <url>
+    <loc>https://thebelleamouraretreat.com/influencers.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- Global Travel Specialists & Consultant Careers -->
+  <url>
+    <loc>https://thebelleamouraretreat.com/careers.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Brand Philosophy & Founder Story -->
+  <url>
+    <loc>https://thebelleamouraretreat.com/about.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Sanctuary Visual Gallery -->
+  <url>
+    <loc>https://thebelleamouraretreat.com/gallery.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+
+  <!-- The Private Journal (Seasonal Intelligence & Travel Notes) -->
+  <url>
+    <loc>https://thebelleamouraretreat.com/journal.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+
+  <!-- Direct Communication Channels & Regional Liaison -->
+  <url>
+    <loc>https://thebelleamouraretreat.com/contact.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Executive Portal Directory -->
+  <url>
+    <loc>https://thebelleamouraretreat.com/portal-home</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+
+  <!-- Legal & Discretion Protocol -->
+  <url>
+    <loc>https://thebelleamouraretreat.com/legal.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://thebelleamouraretreat.com/privacy.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Terms & Conditions -->
+  <url>
+    <loc>https://thebelleamouraretreat.com/terms.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+</urlset>

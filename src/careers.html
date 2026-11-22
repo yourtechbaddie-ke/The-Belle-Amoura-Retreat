@@ -1,0 +1,1155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#063B3D">
+  <meta name="description" content="Careers & Contractor Opportunities | The Belle Amoura Retreat. Join our independent luxury travel curation house as a travel consultant or specialist.">
+  <title>Careers &amp; Opportunities | The Belle Amoura Retreat</title>
+  
+  <link rel="icon" type="image/png" href="/assets/logo-emblem.png">
+  <link rel="apple-touch-icon" href="/assets/logo-emblem.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=42">
+  <script>
+    // Early global definitions for career board interactions
+    window.toggleDossier = function(btn) {
+      var card = btn.closest('.role-card');
+      var dossier = card ? card.querySelector('.role-dossier-wrap') : null;
+      if (!dossier) return;
+      var isOpen = dossier.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      var label = btn.querySelector('span:first-child');
+      var arrow = btn.querySelector('span:last-child');
+      if (isOpen) {
+        if (label) label.textContent = 'Collapse Dossier';
+        if (arrow) arrow.textContent = '▴';
+      } else {
+        if (label) label.textContent = 'View Full Dossier & Atelier Stages';
+        if (arrow) arrow.textContent = '▾';
+      }
+    };
+    window.applyForRole = function(roleTitle) {
+      var roleSelect = document.getElementById('c-role');
+      if (roleSelect) {
+        var matched = false;
+        for (var i = 0; i < roleSelect.options.length; i++) {
+          if (roleSelect.options[i].value === roleTitle || roleSelect.options[i].text.indexOf(roleTitle) !== -1) {
+            roleSelect.selectedIndex = i;
+            matched = true;
+            break;
+          }
+        }
+        if (!matched) roleSelect.value = roleTitle;
+      }
+      var appSection = document.getElementById('application');
+      if (appSection) appSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      var formBox = document.querySelector('.app-form-box');
+      if (formBox) {
+        formBox.classList.remove('form-highlight-pulse');
+        void formBox.offsetWidth;
+        formBox.classList.add('form-highlight-pulse');
+      }
+      var nameInput = document.getElementById('c-name');
+      if (nameInput) setTimeout(function() { nameInput.focus(); }, 600);
+    };
+  </script>
+  
+  <style>
+    .careers-hero {
+      position: relative;
+      min-height: 60vh;
+      background-color: var(--peacock-dark);
+      background-image: url('https://images.pexels.com/photos/30591782/pexels-photo-30591782.jpeg?auto=compress&cs=tinysrgb&w=2200');
+      background-size: cover;
+      background-position: center 38%;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      padding: clamp(70px, 11vw, 100px) 6.5% 65px;
+      overflow: hidden;
+    }
+    .careers-hero-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(4,36,38,0.96) 0%, rgba(4,36,38,0.78) 55%, rgba(4,36,38,0.35) 100%),
+                  linear-gradient(0deg, rgba(4,36,38,0.7) 0%, transparent 60%);
+    }
+    .careers-hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 860px;
+    }
+    .careers-hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(38px, 5.5vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      margin: 16px 0 20px;
+      color: #FFFFFF;
+    }
+    .careers-hero h1 em {
+      color: var(--gold-champagne);
+      font-style: italic;
+    }
+    .careers-hero p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: rgba(250, 247, 240, 0.9);
+      max-width: 620px;
+      margin: 0 0 28px;
+    }
+
+    .culture-section {
+      padding: 90px 6.5%;
+      background: var(--ivory);
+    }
+    .roles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    @media (max-width: 820px) {
+      .roles-grid { grid-template-columns: 1fr; }
+    }
+    .role-card {
+      background: var(--porcelain);
+      padding: 34px 30px;
+      border-radius: 4px;
+      border: 1px solid var(--border-subtle);
+      border-top: 3px solid var(--peacock);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .role-card.highlight {
+      border-top-color: var(--gold);
+      background: #FFFFFF;
+      box-shadow: var(--shadow-md);
+    }
+    .role-badge {
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--peacock);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .role-card h3 {
+      font-family: var(--serif);
+      font-size: 24px;
+      color: var(--peacock-deep);
+      margin: 0 0 12px;
+    }
+    .role-card p {
+      font-size: 13px;
+      line-height: 1.85;
+      color: var(--text-muted);
+      margin: 0 0 16px;
+    }
+    .role-card ul {
+      padding-left: 18px;
+      font-size: 12px;
+      line-height: 1.9;
+      color: var(--text-muted);
+      margin: 0 0 20px;
+    }
+
+    /* Dedicated Application Form */
+    .app-section {
+      padding: 90px 6.5%;
+      background: var(--peacock-deep);
+      color: #FFFFFF;
+    }
+    .app-form-box {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--porcelain);
+      color: var(--text-primary);
+      padding: clamp(32px, 5vw, 56px);
+      border-radius: 6px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--gold);
+      transition: all 0.3s ease;
+    }
+
+    /* Interactive Career Board Controls & Dossiers */
+    .career-board-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-top: 36px;
+      flex-wrap: wrap;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-subtle, #d8d0c0);
+    }
+    .career-search-box {
+      flex: 1;
+      min-width: 280px;
+      max-width: 440px;
+      position: relative;
+    }
+    .career-search-input {
+      width: 100%;
+      padding: 13px 18px 13px 40px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle, #d8d0c0);
+      border-radius: 4px;
+      font-family: var(--sans);
+      font-size: 13px;
+      color: var(--text-primary);
+      outline: none;
+      transition: all 0.25s ease;
+      box-sizing: border-box;
+    }
+    .career-search-input:focus {
+      border-color: var(--peacock);
+      box-shadow: 0 0 0 3px rgba(11, 79, 74, 0.12);
+    }
+    .career-search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #888;
+      font-size: 14px;
+    }
+    .career-filter-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .career-tab-btn {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle, #d8d0c0);
+      padding: 8px 16px;
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--peacock-deep);
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .career-tab-btn:hover {
+      background: var(--teal-soft);
+      border-color: var(--peacock);
+    }
+    .career-tab-btn.active {
+      background: var(--peacock);
+      color: #FFFFFF;
+      border-color: var(--peacock);
+    }
+    .career-tab-btn .count {
+      opacity: 0.75;
+      font-size: 9px;
+      margin-left: 4px;
+    }
+    .role-meta-row {
+      display: flex;
+      gap: 16px;
+      font-size: 11px;
+      color: var(--gold-brass, #B7955B);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .role-card-compensation {
+      display: inline-block;
+      padding: 6px 12px;
+      background: #EBF4F1;
+      color: var(--peacock, #0B4F4A);
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      border-radius: 2px;
+      margin-bottom: 14px;
+    }
+    .role-dossier-wrap {
+      display: none;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-subtle, #d8d0c0);
+      font-size: 12.5px;
+      line-height: 1.75;
+      color: #444;
+      animation: fadeIn 0.3s ease;
+    }
+    .role-dossier-wrap.open {
+      display: block;
+    }
+    .dossier-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 10px;
+    }
+    @media (max-width: 650px) {
+      .dossier-grid-2 { grid-template-columns: 1fr; }
+    }
+    .dossier-item {
+      background: #FAF7F0;
+      padding: 14px;
+      border-radius: 2px;
+      border: 1px solid #E5DFD3;
+    }
+    .dossier-item strong {
+      display: block;
+      color: var(--peacock);
+      margin-bottom: 4px;
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .interview-stages-badge {
+      background: #042426;
+      color: var(--gold-champagne);
+      padding: 10px 14px;
+      border-radius: 2px;
+      font-size: 11px;
+      line-height: 1.6;
+      margin-top: 14px;
+    }
+    .toggle-dossier-btn {
+      background: none;
+      border: none;
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--peacock);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 0;
+      margin-bottom: 12px;
+    }
+    .toggle-dossier-btn:hover {
+      color: var(--peacock-vibrant);
+    }
+    @keyframes highlightForm {
+      0% { box-shadow: 0 0 0 0 rgba(183, 149, 91, 0.8); }
+      70% { box-shadow: 0 0 0 16px rgba(183, 149, 91, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(183, 149, 91, 0); }
+    }
+    .form-highlight-pulse {
+      animation: highlightForm 1.6s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <!-- Master Top Navigation Bar -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="/" aria-label="The Belle Amoura Retreat home">
+        <div class="brand-logo-frame">
+          <img src="/assets/logo.png" alt="The Belle Amoura Retreat Official Logo" class="official-logo-img">
+        </div>
+        <div class="brand-title-wrap">
+          <span class="brand-name">THE BELLE AMOURA RETREAT</span>
+          <span class="brand-subtitle">THE WORLD, THOUGHTFULLY YOURS</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <a class="nav-cta" href="/book-your-escape.html">Plan your escape <span>↗</span></a>
+        <button class="menu-toggle" id="menu-toggle-btn" type="button" aria-label="Open navigation" aria-expanded="false" onclick="window.__toggleRetreatDrawer && window.__toggleRetreatDrawer(event)">
+          <span class="menu-icon">&#9776;</span>
+          <span class="menu-text">Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Universal Slide-Out Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation drawer">
+    <div class="drawer-panel">
+      <div>
+        <div class="drawer-header">
+          <a class="brand" href="/" style="color: #FFFFFF;">
+            <div class="brand-logo-frame">
+              <img src="/assets/logo-emblem.png" alt="The Belle Amoura Retreat Official Logo" class="official-logo-img">
+            </div>
+            <div class="brand-title-wrap">
+              <span class="brand-name" style="color: #FFFFFF;">THE BELLE AMOURA RETREAT</span>
+              <span class="brand-subtitle" style="color: var(--gold-champagne);">THE WORLD, THOUGHTFULLY YOURS</span>
+            </div>
+          </a>
+          <button class="drawer-close" id="drawer-close-btn" type="button" aria-label="Close menu">&times;</button>
+        </div>
+
+        <nav class="drawer-links" aria-label="Drawer navigation">
+          <a href="/">Home <span>↗</span></a>
+          <a href="/about.html">Our story <span>↗</span></a>
+          <a href="/experiences.html">Experiences <span>↗</span></a>
+          <a href="/gallery.html">Visual gallery <span>↗</span></a>
+          <a href="/journal.html">The Journal <span>↗</span></a>
+          <a href="/investors.html">Investors &amp; Partners <span>↗</span></a>
+          <a href="/careers.html">Careers &amp; Board <span>↗</span></a>
+          <a href="/influencers.html">Influencer Alliance <span>↗</span></a>
+          <a href="/legal.html">Legal &amp; Governance <span>↗</span></a>
+          <a href="/book-your-escape.html">Plan your escape <span>↗</span></a>
+          <a href="/contact.html">Contact concierge <span>↗</span></a>
+        </nav>
+      </div>
+
+      <div class="drawer-contact">
+        <span style="font-weight: 700; color: #FFFFFF; text-transform: uppercase; letter-spacing: 0.16em;">Concierge Liaison Desk</span>
+        <a href="tel:+254706168307">+254 706 168 307 (Direct)</a>
+        <a href="https://wa.me/254706168307" target="_blank" rel="noopener noreferrer">WhatsApp Priority Messaging ↗</a>
+        <a href="mailto:thebelleamouraretreat@gmail.com">thebelleamouraretreat@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Unique Hero (Luxury Travel Atelier Salon & Design Lounge) -->
+    <section class="careers-hero">
+      <div class="careers-hero-scrim"></div>
+      <div class="careers-hero-inner">
+        <p class="hero-eyebrow">CAREERS &amp; CONTRACTOR OPPORTUNITIES</p>
+        <h1>Make room for the<br><em>extraordinary.</em></h1>
+        <p>We are expanding our global circle of independent luxury travel consultants, destination curators, and experiential specialists. Build client relationships that matter, backed by our world-class supplier network.</p>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <a class="btn-peacock" href="#application">Submit Consultant Application <span>↗</span></a>
+          <a class="btn-gold-outline" href="#roles">Explore Collaboration Roles ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roles & Culture / Interactive Board -->
+    <section class="culture-section" id="roles">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; margin-bottom: 28px;">
+        <div style="max-width: 680px;">
+          <span class="section-label">HOW WE WORK TOGETHER</span>
+          <h2 class="section-title">Grow with a recognized<br><em>standard of luxury.</em></h2>
+          <p style="font-size: 14px; line-height: 1.85; color: var(--text-muted); margin-top: 14px;">
+            The Belle Amoura Retreat is actively contracting exceptional talent across executive legal counsel, private client sales, digital growth, creator residencies, and strategic B2B hospitality alliances.
+          </p>
+        </div>
+        <div style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--peacock-deep); font-weight: 600; padding: 8px 14px; background: #EBF4F1; border-radius: 2px;">
+          <span id="role-count-display">Showing 6 of 6 Available Positions</span>
+        </div>
+      </div>
+
+      <!-- Search & Category Filter Bar -->
+      <div style="background: #FFFFFF; border: 1px solid var(--border-subtle, #d8d0c0); padding: 20px; border-radius: 4px; margin-bottom: 30px; box-shadow: 0 4px 16px rgba(11,79,74,0.04);">
+        <div style="display: grid; grid-template-columns: 1fr; gap: 16px;">
+          <!-- Search input -->
+          <div class="career-search-wrapper" style="position: relative;">
+            <span class="career-search-icon">🔍</span>
+            <input type="text" id="career-search" class="career-search-input" placeholder="Search positions by title, specialty, keyword (e.g. lawyer, commission, SEO, influencer, contract)..." aria-label="Search open roles">
+          </div>
+
+          <!-- Category filter buttons -->
+          <div class="career-filter-tabs" id="career-filter-tabs" role="tablist" aria-label="Filter roles by category">
+            <button type="button" class="career-tab-btn active" data-filter="all" role="tab" aria-selected="true">
+              All Openings <span class="count">(6)</span>
+            </button>
+            <button type="button" class="career-tab-btn" data-filter="legal" role="tab" aria-selected="false">
+              Legal &amp; Counsel <span class="count">(1)</span>
+            </button>
+            <button type="button" class="career-tab-btn" data-filter="sales" role="tab" aria-selected="false">
+              Sales &amp; Curation <span class="count">(2)</span>
+            </button>
+            <button type="button" class="career-tab-btn" data-filter="growth" role="tab" aria-selected="false">
+              Digital &amp; Growth <span class="count">(1)</span>
+            </button>
+            <button type="button" class="career-tab-btn" data-filter="creator" role="tab" aria-selected="false">
+              Creator Alliances <span class="count">(1)</span>
+            </button>
+            <button type="button" class="career-tab-btn" data-filter="b2b" role="tab" aria-selected="false">
+              B2B Correlation <span class="count">(1)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="roles-grid" id="roles-grid">
+        <!-- Role 1: Luxury Travel Consultant -->
+        <article class="role-card highlight" data-category="sales" data-title="luxury travel consultant independent contractor" data-keywords="itinerary private villas safaris concierge booking commissions advisory atelier client">
+          <div>
+            <div class="role-meta-row">
+              <span>Department: Private Escapes</span>
+              <span>•</span>
+              <span>Contractor: Remote Global</span>
+              <span>•</span>
+              <span>Evaluation Track: LC-201</span>
+            </div>
+            <span class="role-badge">OPEN NOW · INDEPENDENT CONTRACTOR</span>
+            <h3>Luxury Travel Consultant</h3>
+            <div class="role-card-compensation">Commission: 12% – 18% Tiered Splits + Supplier Amenity Credits</div>
+            <p>Work directly with discerning private clients to curate bespoke luxury itineraries, private island buyouts, superyacht charters, and singular architectural retreats. Enjoy complete remote autonomy backed by our global supplier portfolio.</p>
+            <ul>
+              <li>Direct access to our verified global supplier network, private airside transfers, and VIP amenities</li>
+              <li>Dedicated back-office operational, billing, and global flight desk clearance support</li>
+              <li>Competitive tiered commission payouts (12%–18%) with transparent monthly reporting</li>
+              <li>Private access to The Amoura Atelier consultant workspace and client CRM</li>
+            </ul>
+
+            <button type="button" class="toggle-dossier-btn" onclick="toggleDossier(this)" aria-expanded="false">
+              <span>View Full Dossier &amp; Interview Stages</span> <span>▾</span>
+            </button>
+
+            <div class="role-dossier-wrap">
+              <div class="dossier-grid-2">
+                <div class="dossier-item">
+                  <strong>Candidate Qualifications</strong>
+                  Minimum 2+ years luxury travel advising, high-touch concierge, or premium hospitality; proven book of high-net-worth clients or demonstrated outbound curation capability; impeccable written etiquette.
+                </div>
+                <div class="dossier-item">
+                  <strong>Atelier Provisioning</strong>
+                  Private access to Amoura Atelier portal, branded client itineraries, travel insurance licensing infrastructure, and dedicated supplier liaisons across 45 countries.
+                </div>
+              </div>
+              <div class="interview-stages-badge">
+                <strong>The Belle Amoura Retreat Interview Stages:</strong><br>
+                • Stage 1: Asynchronous Video Introduction &amp; Destination Curation Philosophy<br>
+                • Stage 2: Bespoke 7-Day Amalfi &amp; St. Moritz Mock Itinerary Scenario (client budget: $45,000)<br>
+                • Stage 3: Live 30-minute Atelier Strategy Session with Founders
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border-subtle, #d8d0c0);">
+            <button type="button" class="btn-peacock" style="width: 100%; justify-content: center; border: none; cursor: pointer;" onclick="applyForRole('Luxury Travel Consultant')">Apply For Consultant Role <span>↗</span></button>
+          </div>
+        </article>
+
+        <!-- Role 2: Official Business Lawyer / General Counsel -->
+        <article class="role-card highlight" data-category="legal" data-title="official business lawyer general counsel retainer attorney" data-keywords="legal governance compliance contracts nda dispute supplier sla trademark ip licensing retainer jurisdiction corporate counsel">
+          <div>
+            <div class="role-meta-row">
+              <span>Department: Legal &amp; Governance</span>
+              <span>•</span>
+              <span>Retainer: Executive Mandate</span>
+              <span>•</span>
+              <span>Evaluation Track: LG-101</span>
+            </div>
+            <span class="role-badge">EXECUTIVE MANDATE · RETAINER / PARTNER</span>
+            <h3>Official Business Lawyer / General Counsel</h3>
+            <div class="role-card-compensation">Retainer: $120,000 – $160,000 Annualized Equivalent + Legal Expense Budget</div>
+            <p>Serve as our appointed outside General Counsel or senior legal retainer. Lead luxury commercial contracts, cross-border jurisdiction, international supplier SLAs (aviation, villas, private islands), patron confidentiality/NDAs, and trademark IP defense.</p>
+            <ul>
+              <li>Draft &amp; audit bespoke villa buyout contracts, Part 135 air charter pacts, and multi-currency supplier agreements</li>
+              <li>Structure strict guest Non-Disclosure Agreements (NDAs) for ultra-high-net-worth (UHNW) patrons and celebrity travelers</li>
+              <li>Advise executive leadership on global privacy (GDPR/CCPA), travel seller registrations, and international liability</li>
+              <li>Protect and defend The Belle Amoura Retreat global trademarks, proprietary curation blueprints, and brand equity</li>
+            </ul>
+
+            <button type="button" class="toggle-dossier-btn" onclick="toggleDossier(this)" aria-expanded="false">
+              <span>View Full Dossier &amp; Interview Stages</span> <span>▾</span>
+            </button>
+
+            <div class="role-dossier-wrap">
+              <div class="dossier-grid-2">
+                <div class="dossier-item">
+                  <strong>Credentials &amp; Bar Admission</strong>
+                  Active legal license in good standing (US state bar, UK SRA, or EU/Commonwealth equivalent); minimum 5+ years commercial, hospitality, luxury retail, or corporate transactions experience.
+                </div>
+                <div class="dossier-item">
+                  <strong>Engagement Framework</strong>
+                  Retainer structure (15–25 hrs/month baseline with surge capacity for property acquisitions and complex high-value guest agreements). Read full terms on our <a href="/legal.html" style="color: var(--peacock); text-decoration: underline;">Legal &amp; Governance Portal</a>.
+                </div>
+              </div>
+              <div class="interview-stages-badge">
+                <strong>The Belle Amoura Retreat Evaluation Stages:</strong><br>
+                • Stage 1: Professional Background &amp; Representative Hospitality/Commercial Portfolio Submission<br>
+                • Stage 2: Practical Contract Audit — Identifying liability gaps in an international villa &amp; jet buyout agreement<br>
+                • Stage 3: Executive Session with Managing Partners &amp; Retainer Mandate Confirmation
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border-subtle, #d8d0c0);">
+            <button type="button" class="btn-peacock" style="width: 100%; justify-content: center; border: none; cursor: pointer;" onclick="applyForRole('Official Business Lawyer / General Counsel')">Submit Legal Profile &amp; Retainer Proposal <span>↗</span></button>
+          </div>
+        </article>
+
+        <!-- Role 3: Sales Professional / Private Client Director -->
+        <article class="role-card" data-category="sales" data-title="sales professional private client director luxury curator" data-keywords="sales client director account executive conversions inbound hnw corporate retreats family office closures">
+          <div>
+            <div class="role-meta-row">
+              <span>Department: Private Sales</span>
+              <span>•</span>
+              <span>Contractor: Remote</span>
+              <span>•</span>
+              <span>Evaluation Track: SP-301</span>
+            </div>
+            <span class="role-badge">COMMERCIAL GROWTH · CONTRACTOR</span>
+            <h3>Sales Professional / Private Client Director</h3>
+            <div class="role-card-compensation">Structure: Generous Retainer Draw + 8%–15% Gross Margin Incentive</div>
+            <p>Lead consultative sales conversations with discerning clientele, family offices, and executives seeking unhurried, tailor-made global journeys. Convert high-intent inbound inquiries into confirmed multi-week itineraries.</p>
+            <ul>
+              <li>Conduct high-touch discovery sessions for high-value inquiries ($20k–$250k+ booking values)</li>
+              <li>Cultivate lasting relationships with private wealth advisors, family offices, and luxury concierge desks</li>
+              <li>Collaborate seamlessly with our destination specialists to ensure flawless guest execution</li>
+              <li>Analyze sales pipeline metrics and guest feedback to continually elevate conversion velocity</li>
+            </ul>
+
+            <button type="button" class="toggle-dossier-btn" onclick="toggleDossier(this)" aria-expanded="false">
+              <span>View Full Dossier &amp; Interview Stages</span> <span>▾</span>
+            </button>
+
+            <div class="role-dossier-wrap">
+              <div class="dossier-grid-2">
+                <div class="dossier-item">
+                  <strong>Ideal Candidate</strong>
+                  Demonstrated track record of luxury sales closing in private travel, yachting, fine jewelry, luxury real estate, or private aviation; high emotional intelligence; discretion with high-profile personalities.
+                </div>
+                <div class="dossier-item">
+                  <strong>Inbound Lead Support</strong>
+                  Warm inbound inquiries generated by our Private Journal and curated digital marketing campaigns; zero cold calling required.
+                </div>
+              </div>
+              <div class="interview-stages-badge">
+                <strong>The Belle Amoura Retreat Interview Stages:</strong><br>
+                • Stage 1: Asynchronous Video — Handling an UHNW client request with tight turnarounds<br>
+                • Stage 2: Mock Client Consultative Call &amp; Objections Handling (Simulated live roleplay)<br>
+                • Stage 3: Sales Leadership Offer &amp; Commission Onboarding
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border-subtle, #d8d0c0);">
+            <button type="button" class="btn-gold-outline" style="width: 100%; justify-content: center; color: var(--peacock); border-color: var(--peacock); cursor: pointer;" onclick="applyForRole('Sales Professional / Luxury Travel Curator')">Apply as Sales Specialist <span>↗</span></button>
+          </div>
+        </article>
+
+        <!-- Role 4: Digital Marketer & Growth Strategist -->
+        <article class="role-card" data-category="growth" data-title="digital marketer growth strategist performance marketing" data-keywords="marketing growth ads meta google seo content email klaviyo funnels editorial branding analytics cpa roas">
+          <div>
+            <div class="role-meta-row">
+              <span>Department: Brand &amp; Digital</span>
+              <span>•</span>
+              <span>Contractor: Flexible Remote</span>
+              <span>•</span>
+              <span>Evaluation Track: DM-401</span>
+            </div>
+            <span class="role-badge">BRAND &amp; ACQUISITION · CONTRACTOR</span>
+            <h3>Digital Marketer &amp; Growth Strategist</h3>
+            <div class="role-card-compensation">Compensation: $4,500 – $7,500 / Month Retainer + Performance Bonus</div>
+            <p>Orchestrate our editorial growth, high-converting digital campaigns, organic luxury branding, and private client acquisition across search, paid media, and curated high-taste channels.</p>
+            <ul>
+              <li>Manage luxury multi-channel digital performance, meta-ads, Google Search, and bespoke remarketing</li>
+              <li>Architect sophisticated lead nurture sequences for The Private Journal and downloadable escape dossiers</li>
+              <li>Optimize organic SEO for high-intent queries (e.g. "luxury villa buyouts Italy", "private safari conservancies")</li>
+              <li>Partner with our visual storytellers and creators to turn editorial photography into high-ROAS assets</li>
+            </ul>
+
+            <button type="button" class="toggle-dossier-btn" onclick="toggleDossier(this)" aria-expanded="false">
+              <span>View Full Dossier &amp; Interview Stages</span> <span>▾</span>
+            </button>
+
+            <div class="role-dossier-wrap">
+              <div class="dossier-grid-2">
+                <div class="dossier-item">
+                  <strong>Skill Requirements</strong>
+                  3+ years in luxury DTC, boutique hospitality, or high-end lifestyle brand growth; proficiency in Meta Ads Manager, GA4, Klaviyo or high-end email platforms, and technical luxury SEO.
+                </div>
+                <div class="dossier-item">
+                  <strong>Aesthetic Alignment</strong>
+                  Ability to balance aggressive commercial growth targets with the minimalist, unhurried, editorial elegance of The Belle Amoura aesthetic.
+                </div>
+              </div>
+              <div class="interview-stages-badge">
+                <strong>The Belle Amoura Retreat Interview Stages:</strong><br>
+                • Stage 1: Growth Portfolio Review &amp; Past Campaign Case Studies<br>
+                • Stage 2: 90-Day Omnichannel Growth Plan Presentation for Autumn Escape Drops<br>
+                • Stage 3: Final Collaboration Terms with Brand Directors
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border-subtle, #d8d0c0);">
+            <button type="button" class="btn-gold-outline" style="width: 100%; justify-content: center; color: var(--peacock); border-color: var(--peacock); cursor: pointer;" onclick="applyForRole('Digital Marketer & Growth Strategist')">Join Growth Team <span>↗</span></button>
+          </div>
+        </article>
+
+        <!-- Role 5: Brand Influencer & Visual Content Creator -->
+        <article class="role-card" data-category="creator" data-title="brand influencer visual content creator editorial photographer" data-keywords="influencer creator residency photography travel instagram tiktok youtube video reels content villa stay collaboration aesthetic">
+          <div>
+            <div class="role-meta-row">
+              <span>Department: Creative Alliances</span>
+              <span>•</span>
+              <span>Residencies &amp; Drops</span>
+              <span>•</span>
+              <span>Evaluation Track: CR-501</span>
+            </div>
+            <span class="role-badge">CREATIVE ALLIANCE · PARTNERSHIP</span>
+            <h3>Brand Influencer &amp; Content Partner</h3>
+            <div class="role-card-compensation">Model: Hosted Luxury Villa Residencies + 10%–15% Booking Commission Drops</div>
+            <p>Collaborate with The Belle Amoura Retreat on experiential sanctuary visits, architectural moodboards, cinematic visual storytelling, and co-curated limited travel releases.</p>
+            <ul>
+              <li>Hosted stays at premier architectural villas, secluded private islands, and African conservancies</li>
+              <li>High-production photographic &amp; visual moodboard rights licensing with full creator attribution</li>
+              <li>Dedicated audience booking links with 10%–15% affiliate revenue sharing on confirmed escapes</li>
+              <li>Feature profiles in our printed and digital Private Journal distributed to private patrons</li>
+            </ul>
+
+            <button type="button" class="toggle-dossier-btn" onclick="toggleDossier(this)" aria-expanded="false">
+              <span>View Full Dossier &amp; Interview Stages</span> <span>▾</span>
+            </button>
+
+            <div class="role-dossier-wrap">
+              <div class="dossier-grid-2">
+                <div class="dossier-item">
+                  <strong>Creator Criteria</strong>
+                  Established social following (Instagram, YouTube, TikTok, Substack) with high engagement and aesthetic alignment; clean, quiet luxury visual language; respectful of sanctuary serenity. Read our complete <a href="/influencers.html" style="color: var(--peacock); text-decoration: underline;">Influencer Landing Page</a>.
+                </div>
+                <div class="dossier-item">
+                  <strong>Deliverable Tiers</strong>
+                  Bespoke content deliverables negotiated per residency (high-res RAW assets, vertical reels, and architectural stills).
+                </div>
+              </div>
+              <div class="interview-stages-badge">
+                <strong>The Belle Amoura Retreat Evaluation Stages:</strong><br>
+                • Stage 1: Creator Media Kit &amp; Audience Demographic Verification<br>
+                • Stage 2: Visual Moodboard Pitch for Upcoming Escape Collection<br>
+                • Stage 3: Residency Scheduling &amp; Commercial Contract Agreement
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border-subtle, #d8d0c0);">
+            <button type="button" class="btn-gold-outline" style="width: 100%; justify-content: center; color: var(--peacock); border-color: var(--peacock); cursor: pointer;" onclick="applyForRole('Brand Influencer & Content Creator')">Apply for Influencer Residency <span>↗</span></button>
+          </div>
+        </article>
+
+        <!-- Role 6: B2B Travel Business Partner & Brand Affiliate -->
+        <article class="role-card" data-category="b2b" data-title="b2b travel business partner brand affiliate strategic synergy correlation" data-keywords="b2b partner correlation resort aviation jet yacht transfer hotel dmv supplier alliance co-marketing commercial synergy">
+          <div>
+            <div class="role-meta-row">
+              <span>Department: Strategic Alliances</span>
+              <span>•</span>
+              <span>B2B Correlation</span>
+              <span>•</span>
+              <span>Evaluation Track: B2B-601</span>
+            </div>
+            <span class="role-badge">B2B CORRELATION · STRATEGIC PARTNER</span>
+            <h3>B2B Travel Partner &amp; Brand Affiliate</h3>
+            <div class="role-card-compensation">Partnership: Mutual Margin Exchange, Cross-Promotion &amp; Preferred Supplier SLA</div>
+            <p>For boutique luxury resorts, private jet operators, yacht charters, destination management houses, and lifestyle brands seeking strategic synergy, correlation, and shared guest curation.</p>
+            <ul>
+              <li>Mutual preferred supplier status and direct guest referrals for private island and estate itineraries</li>
+              <li>Co-branded luxury itineraries, dual-market press features, and exclusive client privileges</li>
+              <li>Direct integration with The Collaboration Garden supplier portal and operational desk</li>
+              <li>Formal reciprocal contracts governed by our institutional SLA and safety standards</li>
+            </ul>
+
+            <button type="button" class="toggle-dossier-btn" onclick="toggleDossier(this)" aria-expanded="false">
+              <span>View Full Dossier &amp; Interview Stages</span> <span>▾</span>
+            </button>
+
+            <div class="role-dossier-wrap">
+              <div class="dossier-grid-2">
+                <div class="dossier-item">
+                  <strong>Partner Eligibility</strong>
+                  Independent luxury properties (minimum 5-star standard), licensed Part 135/EASA air carriers, vetted maritime charters, or luxury lifestyle brands seeking audience cross-pollination.
+                </div>
+                <div class="dossier-item">
+                  <strong>Operational Synergy</strong>
+                  Streamlined invoicing, real-time availability sync, and priority guest recognition with bespoke welcome amenities.
+                </div>
+              </div>
+              <div class="interview-stages-badge">
+                <strong>The Belle Amoura Retreat Evaluation Stages:</strong><br>
+                • Stage 1: Partnership Proposal &amp; Asset Quality Audit<br>
+                • Stage 2: Operational SLA Review &amp; Insurance / Safety Compliance<br>
+                • Stage 3: Strategic Alliance Execution &amp; Co-Branded Launch
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border-subtle, #d8d0c0);">
+            <button type="button" class="btn-gold-outline" style="width: 100%; justify-content: center; color: var(--peacock); border-color: var(--peacock); cursor: pointer;" onclick="applyForRole('B2B Travel Business Partner & Affiliate')">Propose Strategic Partnership <span>↗</span></button>
+          </div>
+        </article>
+      </div>
+
+      <!-- No Results Fallback State -->
+      <div id="no-roles-found" style="display: none; text-align: center; padding: 60px 20px; background: #FFFFFF; border: 1px dashed var(--border-subtle, #d8d0c0); border-radius: 4px; margin-top: 20px;">
+        <p style="font-family: var(--serif); font-size: 24px; color: var(--peacock); margin-bottom: 8px;">No matching positions found</p>
+        <p style="font-size: 14px; color: var(--text-muted); max-width: 500px; margin: 0 auto 20px;">We could not find any openings matching your query. Try searching for "lawyer", "sales", "consultant", "influencer", or reset your filters.</p>
+        <button type="button" class="btn-peacock" onclick="resetFilters()" style="cursor: pointer; border: none; padding: 10px 24px;">Reset Search Filters</button>
+      </div>
+    </section>
+
+    <!-- Dedicated Application Form Section -->
+    <section class="app-section" id="application">
+      <div style="text-align: center; max-width: 680px; margin: 0 auto 40px;">
+        <span class="section-label" style="justify-content: center; color: var(--gold-champagne);">JOIN OUR ATELIER</span>
+        <h2 style="font-family: var(--serif); font-size: clamp(34px, 4vw, 52px); color: #FFFFFF; margin: 12px 0 16px;">Consultant &amp; Contractor Application</h2>
+        <p style="font-size: 14px; line-height: 1.8; color: rgba(232,244,243,0.85); margin: 0;">Tell us about your background, destinations of expertise, and vision for luxury travel. We review all applications within 3 business days.</p>
+      </div>
+
+      <div class="app-form-box">
+        <div class="form-header">
+          <span class="form-header-title">THE BELLE AMOURA TALENT APPLICATION</span>
+          <span style="color: var(--gold-brass); font-size: 16px;">✦</span>
+        </div>
+
+        <form id="career-form">
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="c-name">Full name *</label>
+              <input id="c-name" name="name" type="text" required placeholder="Elena Rostova">
+            </div>
+            <div class="form-group">
+              <label for="c-email">Email address *</label>
+              <input id="c-email" name="email" type="email" required placeholder="elena@rostovatravel.com">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="c-phone">Phone number / WhatsApp *</label>
+              <input id="c-phone" name="phone" type="tel" required placeholder="+1 415 555 2671">
+            </div>
+            <div class="form-group">
+              <label for="c-loc">Location / Timezone</label>
+              <input id="c-loc" name="location" type="text" placeholder="London, UK (GMT) / New York (EST)">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="c-role">Position of interest *</label>
+              <select id="c-role" name="role" required>
+                <option value="Luxury Travel Consultant">Luxury Travel Consultant (Independent Contractor)</option>
+                <option value="Official Business Lawyer / General Counsel">Official Business Lawyer / General Counsel</option>
+                <option value="Sales Professional / Luxury Travel Curator">Sales Professional / Luxury Travel Curator</option>
+                <option value="Digital Marketer & Growth Strategist">Digital Marketer &amp; Growth Strategist</option>
+                <option value="Brand Influencer & Content Creator">Brand Influencer &amp; Content Creator</option>
+                <option value="B2B Travel Business Partner & Affiliate">B2B Travel Business Partner &amp; Affiliate</option>
+                <option value="Destination Scout & Curator">Destination Scout &amp; Curator</option>
+                <option value="VIP Guest Relations & Concierge">VIP Guest Relations &amp; Concierge</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="c-exp">Experience in luxury/travel</label>
+              <select id="c-exp" name="experience">
+                <option value="3–5 years in luxury hospitality">3–5 years in luxury hospitality</option>
+                <option value="5+ years as travel advisor">5+ years as travel advisor</option>
+                <option value="1–3 years boutique agency">1–3 years boutique agency</option>
+                <option value="Experienced content/scout specialist">Experienced content/scout specialist</option>
+                <option value="Passionate newcomer with high client book">Passionate newcomer with high client book</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="c-port">Portfolio / LinkedIn / Instagram profile</label>
+            <input id="c-port" name="portfolio" type="url" placeholder="https://linkedin.com/in/yourname or instagram.com/...">
+          </div>
+
+          <div class="form-group">
+            <label for="c-message">Tell us about your philosophy and client relationships</label>
+            <textarea id="c-message" name="message" rows="4" placeholder="Which destinations are your signature strengths? How do you craft unforgettable stays?"></textarea>
+          </div>
+
+          <label class="consent-check">
+            <input type="checkbox" name="consent" required checked>
+            <span>I confirm that this is an application for an independent contractor collaboration. I agree to uphold The Belle Amoura Retreat client confidentiality protocols.</span>
+          </label>
+
+          <button class="submit-btn" type="submit">
+            <span>Submit Application</span>
+            <span>↗</span>
+          </button>
+
+          <div class="form-status-box" id="c-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Public Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
+          <img src="/assets/logo-emblem.png" alt="The Belle Amoura Retreat Logo" style="width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+          <div>
+            <h2 style="margin: 0; font-size: 20px; color: var(--gold-champagne);">THE BELLE AMOURA RETREAT</h2>
+            <p style="margin: 2px 0 0; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(230,210,168,0.75);">TRAVEL · CURATE · BELONG</p>
+          </div>
+        </div>
+        <p>The world, thoughtfully yours.</p>
+      </div>
+
+      <div class="footer-links-cluster">
+        <div class="footer-col">
+          <h4>Sanctuaries</h4>
+          <ul>
+            <li><a href="/experiences.html#coastal">Coastal &amp; Island</a></li>
+            <li><a href="/experiences.html#safari">Wilderness &amp; Safari</a></li>
+            <li><a href="/experiences.html#culture">Cultural Capitals</a></li>
+            <li><a href="/experiences.html#wellness">Wellness &amp; Spas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>The Retreat</h4>
+          <ul>
+            <li><a href="/about.html">Our story &amp; ethics</a></li>
+            <li><a href="/gallery.html">Visual gallery</a></li>
+            <li><a href="/journal.html">The Journal</a></li>
+            <li><a href="/investors.html">Investors &amp; Partners</a></li>
+            <li><a href="/careers.html">Careers &amp; Contractors</a></li>
+            <li><a href="/influencers.html">Influencer Residencies</a></li>
+            <li><a href="/legal.html">Legal &amp; Governance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Direct Channels</h4>
+          <ul>
+            <li><a href="mailto:thebelleamouraretreat@gmail.com">thebelleamouraretreat@gmail.com</a></li>
+            <li><a href="tel:+254706168307">+254 706 168 307</a></li>
+            <li><a href="https://wa.me/254706168307" target="_blank" rel="noopener noreferrer">WhatsApp priority ↗</a></li>
+            <li><a href="https://www.instagram.com/thebelleamouraretreat/" target="_blank" rel="noopener noreferrer">Instagram (@thebelleamouraretreat) ↗</a></li>
+            <li><a href="https://www.tiktok.com/@the.belle.amoura.retreat" target="_blank" rel="noopener noreferrer">TikTok (@the.belle.amoura.retreat) ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compact 'Private Journal' Newsletter Signup Component -->
+    <div class="footer-newsletter-wrap">
+      <div class="footer-newsletter-copy">
+        <span class="footer-newsletter-kicker">✦ THE PRIVATE JOURNAL</span>
+        <h3 class="footer-newsletter-title">Receive Considered Dispatches</h3>
+        <p class="footer-newsletter-desc">Periodic private intelligence on unlisted sanctuaries, seasonal openings, and bespoke escapes. Discreet and never frequent.</p>
+      </div>
+
+      <form class="footer-newsletter-form" id="journal-newsletter-form" novalidate>
+        <div class="newsletter-input-group">
+          <input type="email" name="email" class="footer-newsletter-input" id="journal-newsletter-email" placeholder="Enter your email address..." required autocomplete="email" aria-label="Email address for The Private Journal">
+          <button type="submit" class="footer-newsletter-btn" id="journal-newsletter-btn">
+            <span>Subscribe</span>
+            <span class="btn-arrow">↗</span>
+          </button>
+        </div>
+        <div class="newsletter-feedback" id="journal-newsletter-feedback" role="status" aria-live="polite"></div>
+        <div class="newsletter-meta-row">
+          <span class="newsletter-privacy-note">Strictly confidential. No spam. Unsubscribe anytime.</span>
+        </div>
+      </form>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> The Belle Amoura Retreat. All rights reserved.</span>
+      <span>Thoughtfully curated. Personally considered.</span>
+      <div style="display: flex; gap: 16px;">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms &amp; Booking Information</a>
+        <a href="/legal.html">Legal Retainer Mandate</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/nav.js" defer></script>
+  <script>
+    // Global Career Board Functions
+    function toggleDossier(btn) {
+      const card = btn.closest('.role-card');
+      const dossier = card ? card.querySelector('.role-dossier-wrap') : null;
+      if (!dossier) return;
+      const isOpen = dossier.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+      const label = btn.querySelector('span:first-child');
+      const arrow = btn.querySelector('span:last-child');
+      if (isOpen) {
+        if (label) label.textContent = 'Collapse Dossier';
+        if (arrow) arrow.textContent = '▴';
+      } else {
+        if (label) label.textContent = 'View Full Dossier & Atelier Stages';
+        if (arrow) arrow.textContent = '▾';
+      }
+    }
+
+    function applyForRole(roleTitle) {
+      const roleSelect = document.getElementById('c-role');
+      if (roleSelect) {
+        let matched = false;
+        for (let i = 0; i < roleSelect.options.length; i++) {
+          if (roleSelect.options[i].value === roleTitle || roleSelect.options[i].text.includes(roleTitle)) {
+            roleSelect.selectedIndex = i;
+            matched = true;
+            break;
+          }
+        }
+        if (!matched) {
+          roleSelect.value = roleTitle;
+        }
+      }
+
+      const appSection = document.getElementById('application');
+      if (appSection) {
+        appSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      const formBox = document.querySelector('.app-form-box');
+      if (formBox) {
+        formBox.classList.remove('form-highlight-pulse');
+        // trigger reflow
+        void formBox.offsetWidth;
+        formBox.classList.add('form-highlight-pulse');
+      }
+
+      const nameInput = document.getElementById('c-name');
+      if (nameInput) {
+        setTimeout(() => nameInput.focus(), 600);
+      }
+    }
+
+    let activeFilter = 'all';
+
+    function filterRoles() {
+      const searchVal = (document.getElementById('career-search')?.value || '').toLowerCase().trim();
+      const cards = document.querySelectorAll('#roles-grid .role-card');
+      const noResults = document.getElementById('no-roles-found');
+      const countDisplay = document.getElementById('role-count-display');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        const title = (card.getAttribute('data-title') || '').toLowerCase();
+        const keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
+        const textContent = card.innerText.toLowerCase();
+
+        const matchesCat = (activeFilter === 'all') || (cat === activeFilter);
+        const matchesSearch = !searchVal || 
+          title.includes(searchVal) || 
+          keywords.includes(searchVal) || 
+          textContent.includes(searchVal);
+
+        if (matchesCat && matchesSearch) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (noResults) {
+        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+      }
+
+      if (countDisplay) {
+        countDisplay.textContent = `Showing ${visibleCount} of ${cards.length} Available Positions`;
+      }
+    }
+
+    function resetFilters() {
+      const searchInput = document.getElementById('career-search');
+      if (searchInput) searchInput.value = '';
+      activeFilter = 'all';
+
+      document.querySelectorAll('#career-filter-tabs .career-tab-btn').forEach(btn => {
+        const isAll = btn.getAttribute('data-filter') === 'all';
+        btn.classList.toggle('active', isAll);
+        btn.setAttribute('aria-selected', isAll ? 'true' : 'false');
+      });
+
+      filterRoles();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Dynamic year
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+
+      // Filter tabs event listeners
+      const tabs = document.querySelectorAll('#career-filter-tabs .career-tab-btn');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+          activeFilter = tab.getAttribute('data-filter') || 'all';
+          filterRoles();
+        });
+      });
+
+      // Search event listener
+      const searchInput = document.getElementById('career-search');
+      if (searchInput) {
+        searchInput.addEventListener('input', () => {
+          filterRoles();
+        });
+      }
+
+      // Application Form Submission
+      const form = document.getElementById('career-form');
+      const statusBox = document.getElementById('c-status');
+
+      if (form) {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const submitBtn = form.querySelector('button[type="submit"]');
+          submitBtn.disabled = true;
+          submitBtn.style.opacity = '0.7';
+
+          const formData = new FormData(form);
+          const payload = Object.fromEntries(formData.entries());
+
+          try {
+            const res = await fetch('/api/career-applications', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            });
+            const data = await res.json();
+
+            if (!res.ok) {
+              throw new Error(data.error || 'Submission failed');
+            }
+
+            form.reset();
+            if (statusBox) {
+              const waUrl = data.whatsappUrl || 'https://wa.me/254706168307';
+              statusBox.className = 'form-status-box show';
+              statusBox.style.background = '#F0FAF4';
+              statusBox.style.borderLeftColor = '#25D366';
+              statusBox.style.color = '#0B4F4A';
+              statusBox.innerHTML = `
+                <div style="font-size:15px; font-weight:700; margin-bottom:6px; color:#063B3D;">
+                  Form submitted successfully. The B.A.R will get back to you as soon as we can
+                </div>
+                <p style="margin:0 0 10px 0; font-size:13px; color:#334155;">
+                  Reference: <code>${data.applicationId || 'APP-ACK'}</code>. Your application has been logged into our executive CRM.
+                </p>
+                <a href="${waUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px; padding:10px 16px; background:#25D366; color:#063B3D; text-decoration:none; font-weight:700; border-radius:6px; font-size:13px; box-shadow:0 3px 10px rgba(37,211,102,0.3);">
+                  <span>📲 Transmit directly to WhatsApp Concierge (+254 706 168 307) ↗</span>
+                </a>
+              `;
+            }
+          } catch (err) {
+            if (statusBox) {
+              statusBox.className = 'form-status-box show';
+              statusBox.style.background = '#FDE8E8';
+              statusBox.style.borderLeftColor = '#C81E1E';
+              statusBox.style.color = '#9B1C1C';
+              statusBox.textContent = err.message || 'There was an issue transmitting your application. Please email your details to thebelleamouraretreat@gmail.com.';
+            }
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '1';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

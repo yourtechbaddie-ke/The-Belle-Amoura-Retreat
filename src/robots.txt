@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin-inbox
+Disallow: /admin-portal.html
+Disallow: /portals/admin-portal.html
+Disallow: /investor-leads.html
+
+Sitemap: https://thebelleamouraretreat.com/sitemap.xml

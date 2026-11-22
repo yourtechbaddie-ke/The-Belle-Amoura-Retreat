@@ -1,0 +1,19 @@
+{
+  "name": "the-belle-amoura-retreat",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "The Belle Amoura Retreat — Luxury travel curation house website and portals",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "node scripts/build-vercel.mjs",
+    "lint": "node --check server.js && node --check api/index.js && node --check scripts/build-vercel.mjs && node --check src/whatsapp-service.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

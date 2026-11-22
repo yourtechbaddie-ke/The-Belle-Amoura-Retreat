@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#063B3D">
+  <meta name="description" content="Our Story | The Belle Amoura Retreat. The world, thoughtfully yours. An independent luxury travel curation house.">
+  <title>Our Story | The Belle Amoura Retreat</title>
+  
+  <link rel="icon" type="image/png" href="/assets/logo-emblem.png">
+  <link rel="apple-touch-icon" href="/assets/logo-emblem.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=42">
+  
+  <style>
+    .about-hero {
+      position: relative;
+      min-height: 58vh;
+      background-color: var(--peacock-dark);
+      background-image: url('https://images.pexels.com/photos/8085317/pexels-photo-8085317.jpeg?auto=compress&cs=tinysrgb&w=2200');
+      background-size: cover;
+      background-position: center 46%;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      padding: clamp(70px, 11vw, 100px) 6.5% 65px;
+      overflow: hidden;
+    }
+    .about-hero-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(4,36,38,0.95) 0%, rgba(4,36,38,0.78) 52%, rgba(4,36,38,0.3) 100%),
+                  linear-gradient(0deg, rgba(4,36,38,0.7) 0%, transparent 60%);
+    }
+    .about-hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 840px;
+    }
+    .about-hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(38px, 5.5vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      margin: 16px 0 20px;
+      color: #FFFFFF;
+    }
+    .about-hero h1 em {
+      color: var(--gold-champagne);
+      font-style: italic;
+    }
+    .about-hero p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: rgba(250, 247, 240, 0.9);
+      max-width: 620px;
+      margin: 0;
+    }
+
+    .about-body-section {
+      padding: 90px 6.5%;
+      background: var(--ivory);
+    }
+    .about-grid-split {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 64px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .about-grid-split { grid-template-columns: 1fr; gap: 36px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Master Top Navigation Bar -->
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="The Belle Amoura Retreat home">
+      <div class="brand-logo-frame">
+        <img src="/assets/logo.png" alt="The Belle Amoura Retreat Official Logo" class="official-logo-img">
+      </div>
+      <div class="brand-title-wrap">
+        <span class="brand-name">THE BELLE AMOURA RETREAT</span>
+        <span class="brand-subtitle">THE WORLD, THOUGHTFULLY YOURS</span>
+      </div>
+    </a>
+
+    <div class="header-actions">
+      <a class="nav-cta" href="/book-your-escape.html">Plan your escape <span>↗</span></a>
+      <button class="menu-toggle" id="menu-toggle-btn" type="button" aria-label="Open navigation" aria-expanded="false" onclick="window.__toggleRetreatDrawer && window.__toggleRetreatDrawer(event)">
+        <span class="menu-icon">&#9776;</span>
+        <span class="menu-text">Menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Universal Slide-Out Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation drawer">
+    <div class="drawer-panel">
+      <div>
+        <div class="drawer-header">
+          <a class="brand" href="/" style="color: #FFFFFF;">
+            <div class="brand-logo-frame">
+              <img src="/assets/logo.png" alt="The Belle Amoura Retreat Official Logo" class="official-logo-img">
+            </div>
+            <div class="brand-title-wrap">
+              <span class="brand-name" style="color: #FFFFFF;">THE BELLE AMOURA RETREAT</span>
+              <span class="brand-subtitle" style="color: var(--gold-champagne);">THE WORLD, THOUGHTFULLY YOURS</span>
+            </div>
+          </a>
+          <button class="drawer-close" id="drawer-close-btn" type="button" aria-label="Close menu">&times;</button>
+        </div>
+
+        <nav class="drawer-links" aria-label="Drawer navigation">
+          <a href="/">Home <span>↗</span></a>
+          <a href="/about.html">Our story <span>↗</span></a>
+          <a href="/experiences.html">Experiences <span>↗</span></a>
+          <a href="/gallery.html">Visual gallery <span>↗</span></a>
+          <a href="/journal.html">The Journal <span>↗</span></a>
+          <a href="/investors.html">Investors &amp; Partners <span>↗</span></a>
+          <a href="/careers.html">Careers &amp; Contractors <span>↗</span></a>
+          <a href="/influencers.html">Influencer Residencies <span>↗</span></a>
+          <a href="/legal.html">Legal &amp; Governance <span>↗</span></a>
+          <a href="/book-your-escape.html">Plan your escape <span>↗</span></a>
+          <a href="/contact.html">Contact concierge <span>↗</span></a>
+        </nav>
+      </div>
+
+      <div class="drawer-contact">
+        <span style="font-weight: 700; color: #FFFFFF; text-transform: uppercase; letter-spacing: 0.16em;">Concierge Liaison Desk</span>
+        <a href="tel:+254706168307">+254 706 168 307 (Direct)</a>
+        <a href="https://wa.me/254706168307" target="_blank" rel="noopener noreferrer">WhatsApp Priority Messaging ↗</a>
+        <a href="mailto:thebelleamouraretreat@gmail.com">thebelleamouraretreat@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Unique Hero (Kyoto Sanctuary Estate) -->
+    <section class="about-hero">
+      <div class="about-hero-scrim"></div>
+      <div class="about-hero-inner">
+        <p class="hero-eyebrow">OUR PHILOSOPHY &amp; ETHOS</p>
+        <h1>Travel should feel like it was chosen <em>just for you.</em></h1>
+        <p>We are building a more thoughtful, unhurried way to discover the world—one shaped by your rhythm, your priorities and the singular moments you want to remember forever.</p>
+      </div>
+    </section>
+
+    <!-- Content Split -->
+    <section class="about-body-section">
+      <div class="about-grid-split">
+        <div>
+          <span class="section-label">A MORE CONSIDERED WAY</span>
+          <h2 class="section-title">Luxury is how<br><em>considered it feels.</em></h2>
+          <p style="font-family: var(--serif); font-size: 21px; line-height: 1.5; color: var(--peacock); font-style: italic; margin: 18px 0 20px;">
+            The Belle Amoura Retreat is a travel curation house created for travellers who want their journeys to feel deeply personal.
+          </p>
+          <p style="font-size: 14px; line-height: 1.9; color: var(--text-muted); margin-bottom: 20px;">
+            We start by listening: what you are celebrating, what helps you unwind, what you have always dreamed of seeing, and what makes a sanctuary feel unmistakably yours.
+          </p>
+          <p style="font-size: 14px; line-height: 1.9; color: var(--text-muted); margin-bottom: 30px;">
+            We curate private cliffside villas, overwater lagoon pavilions, wilderness safari lodges, intimate cultural ateliers, and direct private aviation. Every recommendation is made with transparency, discretion, and care.
+          </p>
+          <a class="btn-peacock" href="/book-your-escape.html">Begin a Conversation <span>↗</span></a>
+        </div>
+
+        <div style="background: var(--porcelain); padding: 40px; border-radius: 6px; border: 1px solid var(--border-gold); box-shadow: var(--shadow-md);">
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+            <img src="/assets/logo-emblem.png" alt="The Belle Amoura Retreat" style="width: 52px; height: 52px; border-radius: 50%; border: 1.5px solid var(--gold);">
+            <div>
+              <strong style="font-family: var(--serif); font-size: 16px; color: var(--peacock-deep); display: block;">The Belle Amoura Promise</strong>
+              <small style="font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-brass);">TRAVEL · CURATE · BELONG</small>
+            </div>
+          </div>
+          <p style="font-size: 13.5px; line-height: 1.85; color: var(--text-muted); margin-bottom: 18px;">
+            <strong>✦ Unbiased Independence:</strong> Zero mass-market package inventory or rigid commercial itineraries.
+          </p>
+          <p style="font-size: 13.5px; line-height: 1.85; color: var(--text-muted); margin-bottom: 18px;">
+            <strong>✦ Human Discretion:</strong> Strict guest privacy and confidential reservation handling.
+          </p>
+          <p style="font-size: 13.5px; line-height: 1.85; color: var(--text-muted); margin: 0;">
+            <strong>✦ 24/7 Dedicated Liaison:</strong> From initial daydream to flight touchdown and return home.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Public Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
+          <img src="/assets/logo-emblem.png" alt="The Belle Amoura Retreat Logo" style="width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+          <div>
+            <h2 style="margin: 0; font-size: 20px; color: var(--gold-champagne);">THE BELLE AMOURA RETREAT</h2>
+            <p style="margin: 2px 0 0; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(230,210,168,0.75);">TRAVEL · CURATE · BELONG</p>
+          </div>
+        </div>
+        <p>The world, thoughtfully yours.</p>
+      </div>
+
+      <div class="footer-links-cluster">
+        <div class="footer-col">
+          <h4>Sanctuaries</h4>
+          <ul>
+            <li><a href="/experiences.html#coastal">Coastal &amp; Island</a></li>
+            <li><a href="/experiences.html#safari">Wilderness &amp; Safari</a></li>
+            <li><a href="/experiences.html#culture">Cultural Capitals</a></li>
+            <li><a href="/experiences.html#wellness">Wellness &amp; Spas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>The Retreat</h4>
+          <ul>
+            <li><a href="/about.html">Our story &amp; ethics</a></li>
+            <li><a href="/gallery.html">Visual gallery</a></li>
+            <li><a href="/journal.html">The Journal</a></li>
+            <li><a href="/investors.html">Investors &amp; Partners</a></li>
+            <li><a href="/careers.html">Careers &amp; Contractors</a></li>
+            <li><a href="/influencers.html">Influencer Residencies</a></li>
+            <li><a href="/legal.html">Legal &amp; Governance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Direct Channels</h4>
+          <ul>
+            <li><a href="mailto:thebelleamouraretreat@gmail.com">thebelleamouraretreat@gmail.com</a></li>
+            <li><a href="tel:+254706168307">+254 706 168 307</a></li>
+            <li><a href="https://wa.me/254706168307" target="_blank" rel="noopener noreferrer">WhatsApp priority ↗</a></li>
+            <li><a href="https://www.instagram.com/thebelleamouraretreat/" target="_blank" rel="noopener noreferrer">Instagram (@thebelleamouraretreat) ↗</a></li>
+            <li><a href="https://www.tiktok.com/@the.belle.amoura.retreat" target="_blank" rel="noopener noreferrer">TikTok (@the.belle.amoura.retreat) ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compact 'Private Journal' Newsletter Signup Component -->
+    <div class="footer-newsletter-wrap">
+      <div class="footer-newsletter-copy">
+        <span class="footer-newsletter-kicker">✦ THE PRIVATE JOURNAL</span>
+        <h3 class="footer-newsletter-title">Receive Considered Dispatches</h3>
+        <p class="footer-newsletter-desc">Periodic private intelligence on unlisted sanctuaries, seasonal openings, and bespoke escapes. Discreet and never frequent.</p>
+      </div>
+
+      <form class="footer-newsletter-form" id="journal-newsletter-form" novalidate>
+        <div class="newsletter-input-group">
+          <input type="email" name="email" class="footer-newsletter-input" id="journal-newsletter-email" placeholder="Enter your email address..." required autocomplete="email" aria-label="Email address for The Private Journal">
+          <button type="submit" class="footer-newsletter-btn" id="journal-newsletter-btn">
+            <span>Subscribe</span>
+            <span class="btn-arrow">↗</span>
+          </button>
+        </div>
+        <div class="newsletter-feedback" id="journal-newsletter-feedback" role="status" aria-live="polite"></div>
+        <div class="newsletter-meta-row">
+          <span class="newsletter-privacy-note">Strictly confidential. No spam. Unsubscribe anytime.</span>
+        </div>
+      </form>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> The Belle Amoura Retreat. All rights reserved.</span>
+      <span>Thoughtfully curated. Personally considered.</span>
+      <div style="display: flex; gap: 16px;">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms &amp; Booking Information</a>
+        <a href="/legal.html">Legal Retainer Mandate</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/nav.js" defer></script>
+</body>
+</html>

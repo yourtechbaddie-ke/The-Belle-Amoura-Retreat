@@ -1,3 +1,97 @@
+/* BELLE AMOURA — unified editorial design system
+   Seven coordinated type families. Brand colours frame the experience; photography retains its own natural colour. */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600;700&family=Italiana&family=Jost:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cinzel:wght@400;500;600;700&display=swap');
-:root{--obsidian:#07090A;--deep-peacock:#063B3D;--peacock:#0B4F4A;--antique-brass:#B7955B;--pearl:#E9E1D5;--antique-grass:#68704A;--deep-grass:#4F5737;--type-display:'Italiana','Cormorant Garamond',serif;--type-editorial:'Playfair Display',serif;--type-contrast:'Cormorant Garamond',serif;--type-brand:'Cinzel',serif;--type-body:'Lora',serif;--type-ui:'Manrope',sans-serif;--type-label:'DM Sans',sans-serif;--type-modern:'Jost',sans-serif}
-body{font-family:var(--type-body)!important;letter-spacing:.005em}h1,h2{font-family:var(--type-display)!important;font-weight:400!important;letter-spacing:-.025em}h3,h4,.portal-title,.section-title{font-family:var(--type-editorial)!important;font-weight:500!important}h1 em,h2 em,blockquote em{font-family:var(--type-contrast)!important;font-weight:400!important}.brand,.wordmark,.logo-type{font-family:var(--type-brand)!important}p,li,blockquote,.desc,.lead{font-family:var(--type-body)!important}button,input,select,textarea,.button,.submit,.nav,.eyebrow,.label,.fine,.back{font-family:var(--type-label)!important}nav a,.utility,.form-label,.dashboard-nav{font-family:var(--type-ui)!important}small,.caption,.overline,.eyebrow{font-family:var(--type-modern)!important}.eyebrow,.overline{letter-spacing:.2em!important;text-transform:uppercase}p{line-height:1.85}img{max-width:100%}:focus-visible{outline:2px solid var(--antique-brass);outline-offset:4px}::selection{background:var(--peacock);color:var(--pearl)}.visual img,.visual{filter:none}.field input,.field select,.field textarea{font-family:var(--type-body)!important}
+
+:root {
+  /* =========================================================================
+     DOMINANT COLOR 1: BLACK CHERRY SPECTRUM (Rich, Decadent, Regal)
+     ========================================================================= */
+  --black-cherry: #3B1219;
+  --black-cherry-deep: #240A0F;
+  --black-cherry-night: #180509;
+  --black-cherry-rich: #4A121D;
+  --black-cherry-glow: #631B27;
+  --black-cherry-soft: #FDF2F4;
+  --black-cherry-tint: #F7EAEB;
+  --black-cherry-border: rgba(59, 18, 25, 0.25);
+
+  /* =========================================================================
+     DOMINANT COLOR 2: PEACOCK TEAL SPECTRUM (Royal, Ocean Deep, Serene)
+     ========================================================================= */
+  --peacock: #005F5B;
+  --peacock-teal: #064E4D;
+  --deep-peacock: #033636;
+  --peacock-deep: #033636;
+  --peacock-dark: #022323;
+  --peacock-vibrant: #108A84;
+  --teal-glow: #14B8A6;
+  --teal-soft: #EBF5F4;
+  --teal-border: rgba(0, 95, 91, 0.22);
+
+  /* =========================================================================
+     SECONDARY COLOR 1: MUTED GREEN (Kindly botanical & nature accents)
+     ========================================================================= */
+  --muted-green: #4E6B58;
+  --muted-green-deep: #354B3D;
+  --muted-green-light: #6A8B74;
+  --muted-green-soft: #EDF3EF;
+  --muted-green-border: rgba(78, 107, 88, 0.25);
+
+  /* =========================================================================
+     SECONDARY COLOR 2: ALMOND-BEIGE (Kindly warm paper & gentle canvas)
+     ========================================================================= */
+  --almond: #F4ECE1;
+  --almond-warm: #EDE2D3;
+  --almond-soft: #FAF6F0;
+  --almond-deep: #DFCEB8;
+  --almond-border: rgba(183, 149, 91, 0.28);
+  --pearl: #FAF6F0;
+  --ivory: #FAF6F0;
+  --porcelain: #F4ECE1;
+
+  /* =========================================================================
+     RETAINED GOLD (Heritage, Calligraphy, Trim & Accents)
+     ========================================================================= */
+  --gold: #C6AA70;
+  --gold-champagne: #E6D2A8;
+  --gold-brass: #B7955B;
+  --antique-brass: #B7955B;
+  --border-gold: rgba(198, 170, 112, 0.38);
+  --obsidian: #07090A;
+
+  --type-display: 'Italiana', 'Cormorant Garamond', serif;
+  --type-editorial: 'Playfair Display', serif;
+  --type-contrast: 'Cormorant Garamond', serif;
+  --type-brand: 'Cinzel', serif;
+  --type-body: 'Lora', serif;
+  --type-ui: 'Manrope', sans-serif;
+  --type-label: 'DM Sans', sans-serif;
+  --type-modern: 'Jost', sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--type-body)!important;font-weight:400;letter-spacing:.005em}
+h1,h2{font-family:var(--type-display)!important;font-weight:400!important;letter-spacing:-.025em}
+h3,h4,.editorial-heading,.section-title{font-family:var(--type-editorial)!important;font-weight:500!important}
+h1 em,h2 em,.display-italic{font-family:var(--type-contrast)!important;font-weight:400!important}
+.brand,.brand-name,.brand-mark,.wordmark,.logo-type{font-family:var(--type-brand)!important}
+p,li,blockquote,.copy,.page-lead,.hero-copy,.desc{font-family:var(--type-body)!important}
+button,input,select,textarea,.button,.nav-links,.nav-cta,.eyebrow,.kicker,.label,.tag,.announcement,.menu-toggle,.text-link,.page-nav,.fine,.meta,.eyebrow small{font-family:var(--type-label)!important}
+nav a,.utility,.form-label,.dashboard-nav,.portal-nav{font-family:var(--type-ui)!important}
+small,.microcopy,.caption,.image-caption,.overline,.eyebrow{font-family:var(--type-modern)!important}
+.announcement{letter-spacing:.18em}
+.eyebrow,.kicker,.overline,.page-kicker{letter-spacing:.2em!important;text-transform:uppercase}
+h1{line-height:.99!important}
+h2{line-height:1.04!important}
+p{line-height:1.85}
+a,button{transition:color .25s ease,background-color .25s ease,border-color .25s ease,transform .25s ease}
+img{max-width:100%}
+:focus-visible{outline:2px solid var(--antique-brass);outline-offset:4px}
+::selection{background:var(--peacock);color:var(--pearl)}
+/* Editorial page rhythm: layered, asymmetric, generous, tactile. */
+.page-body,.content,.section-inner{position:relative}
+.page-card,.contact-item,.card,.experience-card,.escape-card,.journal-card{transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
+.page-card:hover,.contact-item:hover,.card:hover,.experience-card:hover,.escape-card:hover,.journal-card:hover{transform:translateY(-4px)}
+/* Keep destination imagery authentic; colour belongs to frames, typography and overlays, not filters on the photograph. */
+.hero-image,.page-hero,.visual,.destination-image,.experience-image{background-color:var(--deep-peacock)}
+.hero img,.hero-image img,.page-hero img{filter:none!important}
+@media(max-width:700px){h1{letter-spacing:-.015em!important}.announcement{font-size:8px;letter-spacing:.12em}.page-body p,.page-lead{line-height:1.9}}

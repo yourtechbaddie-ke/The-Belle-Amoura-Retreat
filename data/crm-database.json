@@ -1,0 +1,197 @@
+[
+  {
+    "id": "crm-mvr5own7",
+    "name": "Amina Vance",
+    "email": "amina.vance@luxurytravel.com",
+    "phone": "+254712345678",
+    "tier": "Private Patron",
+    "status": "New Inquiry",
+    "preferredDestinations": [
+      "Maldives Overwater Lagoon"
+    ],
+    "totalBookings": 1,
+    "lifetimeValue": 0,
+    "lastDestination": "Maldives Overwater Lagoon",
+    "preferences": "Sector: Private Patron. Format: Flexible Installment Package (Lipa Pole Pole). Plan: Flexible. Budget: Luxury Overwater & Arctic Igloos ($3,500 - $6,500). Party: 2 travellers. Timing: Flexible. Focus: Curated Escape.",
+    "notes": "Requesting a 5-day overwater villa with private lagoon plunge pool on Lipa Pole Pole.",
+    "assignedConsultant": "Founder / Concierge",
+    "createdAt": "2026-10-27T20:46:49.411Z",
+    "updatedAt": "2026-10-27T20:46:49.411Z"
+  },
+  {
+    "id": "crm-mvr4td3e",
+    "name": "Sarah Jenkins",
+    "email": "sarah.jenkins@example.com",
+    "phone": "+254 712 345 678",
+    "tier": "Private Patron",
+    "status": "New Inquiry",
+    "preferredDestinations": [
+      "Orlando Magic: Disney World, Universal & SeaWorld"
+    ],
+    "totalBookings": 1,
+    "lifetimeValue": 0,
+    "lastDestination": "Orlando Magic: Disney World, Universal & SeaWorld",
+    "preferences": "Sector: Family with Kids (Theme Parks & Safaris). Format: Flexible Installment Package (Lipa Pole Pole). Party: Family with Kids. Timing: 3–6 months. Focus: Kids & Family Theme Parks (Disney, Universal, SeaWorld).",
+    "notes": "We would like to book the Orlando Disney & Universal package for our family of 4, paying the deposit now and remaining balance in 3 monthly installments.",
+    "assignedConsultant": "Founder / Concierge",
+    "createdAt": "2026-10-27T20:22:17.738Z",
+    "updatedAt": "2026-10-27T20:22:17.738Z"
+  },
+  {
+    "id": "crm-mvo9o3hj",
+    "name": "His Excellency Ambassador Julian Thorne",
+    "email": "j.thorne@diplomatic-mission.ch",
+    "phone": "+41 22 798 1140",
+    "tier": "Sovereign Black",
+    "status": "New Inquiry",
+    "preferredDestinations": [
+      "Diani Private Villa & Great Rift Valley"
+    ],
+    "totalBookings": 1,
+    "lifetimeValue": 0,
+    "lastDestination": "Diani Private Villa & Great Rift Valley",
+    "preferences": "Sector: diplomatic_official. Format: turnkey_retainer. Party: 2 travellers. Timing: December 2026 - Sovereign Protocol. Focus: Curated Escape.",
+    "notes": "Full discreet diplomatic security coordination, private airstrip clearance, unlisted private residence buyout.",
+    "assignedConsultant": "Founder / Concierge",
+    "createdAt": "2026-10-25T20:14:51.559Z",
+    "updatedAt": "2026-10-25T20:14:51.559Z"
+  },
+  {
+    "id": "crm-mvo9n7kp",
+    "name": "Dr. Victoria Sterling, MD",
+    "email": "v.sterling@surgery-consortium.org",
+    "phone": "",
+    "tier": "Private Patron",
+    "status": "New Inquiry",
+    "preferredDestinations": [
+      "Masai Mara & Seychelles Private Atoll"
+    ],
+    "totalBookings": 1,
+    "lifetimeValue": 0,
+    "lastDestination": "Masai Mara & Seychelles Private Atoll",
+    "preferences": "Party: 2 travellers. Timing: Q1 2027 Bespoke Window. Focus: Curated Escape.",
+    "notes": "Requiring complete end-to-end flight management, private villa buyout, and discreet private transfers.",
+    "assignedConsultant": "Founder / Concierge",
+    "createdAt": "2026-10-25T20:14:10.201Z",
+    "updatedAt": "2026-10-25T20:14:10.201Z"
+  },
+  {
+    "id": "crm-mvo901fx",
+    "name": "Amina Wanjiku",
+    "email": "amina.wanjiku@nairobi-patrons.ke",
+    "phone": "",
+    "tier": "Atelier Platinum",
+    "status": "Active Planning",
+    "preferredDestinations": [
+      "Maasai Mara & Lamu Archipelago"
+    ],
+    "totalBookings": 1,
+    "lifetimeValue": 35000,
+    "lastDestination": "Maasai Mara & Lamu Archipelago",
+    "preferences": "Party: Two travellers. Timing: Next month. Focus: Safari & Coastal.",
+    "notes": "Spoke on WhatsApp. Confirmed 7-day private bush camp in Maasai Mara + 4-day private dhow in Lamu.",
+    "assignedConsultant": "Founder / Concierge",
+    "createdAt": "2026-10-25T19:56:09.165Z",
+    "updatedAt": "2026-10-25T19:56:22.169Z"
+  },
+  {
+    "id": "crm-001",
+    "name": "Lady Genevieve Scott",
+    "email": "genevieve.scott@mayfair-estates.co.uk",
+    "phone": "+44 20 7946 0882",
+    "tier": "Sovereign Black",
+    "status": "Confirmed Stay",
+    "preferredDestinations": [
+      "Amalfi Coast & Capri",
+      "St. Moritz",
+      "Kyoto"
+    ],
+    "totalBookings": 4,
+    "lifetimeValue": 142000,
+    "lastDestination": "Cliffside Private Villa, Positano",
+    "preferences": "Prefers cliffside private villas with dedicated motorboat charter (Riva Dolceriva); organic Mediterranean dining; private airside tarmac clearance.",
+    "notes": "VIP inaugural client. Hosted for 10-day Amalfi & Capri retreat in June 2026. Highly discreet; all staff NDAs strictly signed.",
+    "assignedConsultant": "Executive Concierge",
+    "createdAt": "2026-04-12T09:30:00.000Z",
+    "updatedAt": "2026-10-24T14:20:00.000Z"
+  },
+  {
+    "id": "crm-002",
+    "name": "Sheikh Tariq Al-Falasi",
+    "email": "tariq.falasi@al-falasi-holdings.ae",
+    "phone": "+971 4 399 2210",
+    "tier": "Sovereign Black",
+    "status": "Active Planning",
+    "preferredDestinations": [
+      "Serengeti & Masai Mara",
+      "Seychelles Private Island"
+    ],
+    "totalBookings": 2,
+    "lifetimeValue": 185000,
+    "lastDestination": "Private Encampment Buyout, Masai Mara",
+    "preferences": "Requires complete buyout of tented encampment; private helicopter survey; halal private chef; dedicated bush airstrip jet clearance.",
+    "notes": "Family retreat for 8 guests. Looking to confirm August 2026 Mara Great Migration survey.",
+    "assignedConsultant": "Founder / Owner",
+    "createdAt": "2026-06-18T11:15:00.000Z",
+    "updatedAt": "2026-10-25T10:00:00.000Z"
+  },
+  {
+    "id": "crm-003",
+    "name": "Julian Montgomery",
+    "email": "j.montgomery@architecturalhorizon.org",
+    "phone": "+1 415 555 8129",
+    "tier": "Atelier Platinum",
+    "status": "In Planning",
+    "preferredDestinations": [
+      "Kyoto & Naoshima",
+      "Dolomites"
+    ],
+    "totalBookings": 3,
+    "lifetimeValue": 78500,
+    "lastDestination": "Machiya Heritage Residence, Kyoto",
+    "preferences": "Architectural connoisseur; requests after-hours private Zen temple abbot meditation; tea ceremony with master artisan; vegan dining.",
+    "notes": "Preparing custom autumn Kyoto architectural itinerary. Inquired about extended Naoshima contemporary art island charter.",
+    "assignedConsultant": "Atelier Lead Scout",
+    "createdAt": "2026-07-22T16:45:00.000Z",
+    "updatedAt": "2026-10-23T18:10:00.000Z"
+  },
+  {
+    "id": "crm-004",
+    "name": "Marcus & Clara Vance",
+    "email": "m.vance@vanceholdings.com",
+    "phone": "+1 212 555 4902",
+    "tier": "Amoura Gold",
+    "status": "Discovery Lead",
+    "preferredDestinations": [
+      "Bali Ocean Sanctuaries",
+      "Amalfi Coast"
+    ],
+    "totalBookings": 1,
+    "lifetimeValue": 39500,
+    "lastDestination": "Uluwatu Cliffside Sanctuary, Bali",
+    "preferences": "Private infinity pool villa, holistic ayurvedic wellness, sunset yacht cruise.",
+    "notes": "Anniversary trip planned for October 2026. Requested quote for 7-night oceanfront villa buyout.",
+    "assignedConsultant": "Travel Specialist",
+    "createdAt": "2026-09-05T08:20:00.000Z",
+    "updatedAt": "2026-10-24T12:00:00.000Z"
+  },
+  {
+    "id": "crm-005",
+    "name": "Helena Vance",
+    "email": "helena.vance@curatedescapes.com",
+    "phone": "+33 1 42 68 55 00",
+    "tier": "Private Patron",
+    "status": "New Inquiry",
+    "preferredDestinations": [
+      "Amalfi Coast & Capri"
+    ],
+    "totalBookings": 1,
+    "lifetimeValue": 42000,
+    "lastDestination": "New Inquiry — Positano & Capri",
+    "preferences": "Cliffside sanctuary, private boat charter, secluded dining reservations.",
+    "notes": "Incoming booking inquiry received through Book Your Escape questionnaire.",
+    "assignedConsultant": "Founder / Owner",
+    "createdAt": "2026-10-23T12:30:00.000Z",
+    "updatedAt": "2026-10-25T11:45:00.000Z"
+  }
+]

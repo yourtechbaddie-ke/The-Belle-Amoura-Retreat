@@ -1,0 +1,56 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "{data,src,portals,public}/**"
+    }
+  },
+  "redirects": [
+    { "source": "/creators", "destination": "/influencers", "permanent": false },
+    { "source": "/portals", "destination": "/portals/portal-home.html", "permanent": false },
+    { "source": "/portals/", "destination": "/portals/portal-home.html", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index" },
+    { "source": "/admin-inbox", "destination": "/admin-inbox.html" },
+    { "source": "/inbox", "destination": "/admin-inbox.html" },
+    { "source": "/portal-home", "destination": "/portal-home.html" },
+    { "source": "/the-amoura-atelier", "destination": "/the-amoura-atelier.html" },
+    { "source": "/atelier", "destination": "/the-amoura-atelier.html" },
+    { "source": "/atelier.html", "destination": "/the-amoura-atelier.html" },
+    { "source": "/the-sovereign-suite", "destination": "/the-sovereign-suite.html" },
+    { "source": "/sovereign", "destination": "/the-sovereign-suite.html" },
+    { "source": "/sovereign.html", "destination": "/the-sovereign-suite.html" },
+    { "source": "/the-meridian-exchange", "destination": "/the-meridian-exchange.html" },
+    { "source": "/meridian", "destination": "/the-meridian-exchange.html" },
+    { "source": "/meridian.html", "destination": "/the-meridian-exchange.html" },
+    { "source": "/the-amoura-alliance", "destination": "/the-amoura-alliance.html" },
+    { "source": "/alliance", "destination": "/the-amoura-alliance.html" },
+    { "source": "/alliance.html", "destination": "/the-amoura-alliance.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/admin-portal", "destination": "/admin-portal.html" },
+    { "source": "/application-received", "destination": "/application-received.html" },
+    { "source": "/book-your-escape", "destination": "/book-your-escape.html" },
+    { "source": "/careers", "destination": "/careers.html" },
+    { "source": "/consultant-portal", "destination": "/consultant-portal.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/contractor-opportunities", "destination": "/contractor-opportunities.html" },
+    { "source": "/experiences", "destination": "/experiences.html" },
+    { "source": "/gallery", "destination": "/gallery.html" },
+    { "source": "/influencers", "destination": "/influencers.html" },
+    { "source": "/investor-leads", "destination": "/investor-leads.html" },
+    { "source": "/investor-portal", "destination": "/investor-portal.html" },
+    { "source": "/investors", "destination": "/investors.html" },
+    { "source": "/journal", "destination": "/journal.html" },
+    { "source": "/legal", "destination": "/legal.html" },
+    { "source": "/partner-portal", "destination": "/partner-portal.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/settings", "destination": "/settings.html" },
+    { "source": "/terms", "destination": "/terms.html" },
+    { "source": "/applications/:slug", "destination": "/applications/:slug.html" },
+    { "source": "/(.*)", "destination": "/api/index" }
+  ]
+}

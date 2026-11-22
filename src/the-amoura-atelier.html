@@ -7,4 +7,11 @@ const login=document.querySelector('#login-tab'),signup=document.querySelector('
 function setMode(next){mode=next;const isSignup=mode==='signup';login.classList.toggle('active',!isSignup);signup.classList.toggle('active',isSignup);login.setAttribute('aria-selected',String(!isSignup));signup.setAttribute('aria-selected',String(isSignup));nameField.hidden=!isSignup;confirmField.hidden=!isSignup;terms.hidden=!isSignup;document.querySelector('#form-title').textContent=isSignup?'Create your private account.':'A more considered way to begin.';document.querySelector('#form-desc').textContent=isSignup?'Request access to your dedicated '+"travel consultant"+' workspace.':'Sign in to continue to your private '+"travel consultant"+' workspace.';document.querySelector('#submit-copy').textContent=isSignup?'Request account access':'Sign in securely';password.autocomplete=isSignup?'new-password':'current-password';confirm.required=isSignup;document.querySelector('#full-name').required=isSignup;status.classList.remove('show')}
 login.addEventListener('click',()=>setMode('login'));signup.addEventListener('click',()=>setMode('signup'));
 form.addEventListener('submit',e=>{e.preventDefault();if(mode==='signup'&&password.value!==confirm.value){status.textContent='Your passwords do not match. Please check them and try again.';status.classList.add('show');confirm.focus();return}status.textContent='The form is validated in this preview, but no account was created and no session was started. Secure sign-in requires the production identity provider to be connected. Please do not rely on this preview for access control.';status.classList.add('show')});
+
+  
+  <!-- Vercel Web Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </script></body></html>
